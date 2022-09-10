@@ -16,10 +16,11 @@ jobs:
      
           script: |
             cd /var/www/html/dira.no
-            sudo -u www-data bash -c 'git pull'
-            sudo -u www-data bash -c 'composer install --no-interaction'
-            sudo -u www-data bash -c 'php craft up'
-            sudo -u www-data bash -c 'php craft clear-caches/all'
+            git pull
+            composer install --no-interaction
+            php craft up
+            php craft clear-caches/all
             cd css-js
-            sudo -u www-data bash -c 'yarn install'
-            sudo -u www-data bash -c 'yarn run prod'
+            yarn install
+            yarn run prod
+            chown -R www-data:www-data /var/www/html/
