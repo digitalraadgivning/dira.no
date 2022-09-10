@@ -1,0 +1,21 @@
+{% set services = craft.entries.section('services').all() %}
+
+{% if services | length %}
+    <div class="global-services-block">
+        <div class="services-title">
+            <h5>Våre tjenester:</h5>
+        </div>
+        <div class="services-list">
+            {% for s in services %}
+                {% set sTitle = s.title %}
+                {% set sUrl   = s.url %}
+
+                <div class="service">
+                    <a href="{{ sUrl }}" class="{{ entry.url == sUrl ? 'active' }}">
+                        {{ sTitle }}
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endif %}

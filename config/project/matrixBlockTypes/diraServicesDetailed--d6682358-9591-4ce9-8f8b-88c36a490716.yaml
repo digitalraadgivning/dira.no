@@ -1,0 +1,70 @@
+field: 48b393c6-8937-4f82-9402-a1d6bd982171 # Page Content
+fieldLayouts:
+  3471b7c1-d13d-4f68-af99-3633518754e1:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 7f2bd309-8b75-4073-97f8-1ca769cc3598 # Our Services Text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 686a6a58-bcd5-404d-a1aa-b7054a9c6531 # Module ID
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  7f2bd309-8b75-4073-97f8-1ca769cc3598: # Our Services Text
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: ourServicesText
+    instructions: 'Custom text description above card links.'
+    name: 'Our Services Text'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '2'
+      multiline: '1'
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  686a6a58-bcd5-404d-a1aa-b7054a9c6531: # Module ID
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: moduleId
+    instructions: ''
+    name: 'Module ID'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: diraServicesDetailed
+name: 'Dira Services - Detailed'
+sortOrder: 4

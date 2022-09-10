@@ -1,0 +1,28 @@
+.load-more {
+    margin-top: 30px;
+    text-align: center;
+
+    a {
+        display: inline-block;
+        background: transparent;
+        font-size: 12px;
+        max-width: 170px;
+
+        &:hover {
+            background: $black;
+        }
+    }
+
+    @include media-up(m) {
+        margin-top: 48px;
+
+        a {
+            font-size: 20px;
+            max-width: 263px;
+
+            &::before {
+                right: 40px;
+            }
+        }
+    }
+}

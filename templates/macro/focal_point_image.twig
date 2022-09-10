@@ -1,0 +1,16 @@
+{% macro pointImage(img, size) %}
+    {% if img %}
+        {% set imgStyles = "background-image: url('" ~ img.getUrl(size) ~ "');" | raw %}
+
+        {% if img.hasFocalPoint %}
+            {% set x = img.focalPoint | first * 100 ~ '%' %}
+            {% set y = img.focalPoint | last * 100 ~ '%' %}
+            {% set imgStyles = imgStyles ~ ' background-position: ' ~ [x, y] | join(' ') %}
+        {% endif %}
+
+        {{ imgStyles }}
+    {% endif %}
+{% endmacro %}
+{# {% import 'macro/focal_point_image' as focalMacro %} #}
+{# {% set headerBg = entry.cphHeaderBg.one() %} #}
+{# <div class="bg-image" style="{{ headerBg ? focalMacro.pointImage(headerBg) }}"></div> #}

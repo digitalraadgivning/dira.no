@@ -1,0 +1,28 @@
+fieldLayouts:
+  a75925ff-1bb9-480f-b006-ac4bce1a76cf:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 87b4972b-92ef-409f-8aeb-c813bdf8acde # Text Block
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: 2202461d-285c-4b02-9aa1-66fea5228786 # Site Custom Navigation
+            instructions: 'Add footer navigation.'
+            label: 'Footer Navigation'
+            required: ''
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+        name: 'Site Footer'
+        sortOrder: 1
+handle: siteFooter
+name: 'Site Footer'
+sortOrder: 3

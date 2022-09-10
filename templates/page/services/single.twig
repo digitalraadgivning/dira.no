@@ -1,0 +1,18 @@
+{% set bodyClass = 'customer-single' %}
+{% extends "_layouts/base" %}
+
+{% set featuredImage = entry.articleImage.one() %}
+{% set content       = entry.csContent %}
+{% set id            = entry.id %}
+{% set handle        = entry.section.handle %}
+
+{% block main %}
+
+    <div class="page-wrapper">
+        {% include '_components/_headers/service-header' with {
+            image: featuredImage
+        } %}
+        {% include '_components/_content/content' %}
+    </div>
+
+{% endblock %}

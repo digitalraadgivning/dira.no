@@ -1,0 +1,67 @@
+.btn {
+    display: inline-block;
+    width: 100%;
+    outline: 0;
+    background: $white;
+    border: 2px solid $black;
+    border-radius: 0;
+    color: $black;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    padding: 12px 20px;
+    font-weight: 700;
+    transition: .2s;
+
+    @include media-up(4k) {
+        font-size: 28px;
+        line-height: 32px;
+    }
+
+    &:hover {
+        background: $black;
+        color: $white;
+    }
+
+    &.grey {
+        background: transparent;
+
+        &:hover {
+            background: $black;
+            color: $white;
+        }
+    }
+
+    &.arrow {
+        position: relative;
+        padding: 6px 60px 6px 20px;
+
+        @include media-up(m) {
+            padding: 12px 60px 12px 20px;
+        }
+
+        &::before {
+            position: absolute;
+            display: block;
+            content: '';
+            width: 10px; height: 10px;
+            right: 20px; top: 7px;
+            border-width: 2px 2px 0 0;
+            border-style: solid;
+            border-color: $black;
+            transform: rotate(135deg);
+
+            @include media-up(m) {
+                width: 14px; height: 14px;
+                right: 20px; top: 10px;
+            }
+        }
+
+        &:hover {
+
+            &::before {
+                border-color: $white;
+            }
+        }
+    }
+}

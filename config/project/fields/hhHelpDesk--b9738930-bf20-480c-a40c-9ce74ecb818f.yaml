@@ -1,0 +1,19 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: fd739832-07b5-48f8-b324-f892f7474a3d # Header - Home
+handle: hhHelpDesk
+instructions: 'Maximum: 3 rows.'
+name: 'Header Help Desk'
+searchable: false
+settings:
+  contentTable: '{{%stc_hhhelpdesk}}'
+  fieldLayout: row
+  maxRows: '3'
+  minRows: ''
+  placeholderKey: null
+  propagationMethod: all
+  selectionLabel: 'Add Help Desk Info'
+  staticField: ''
+translationKeyFormat: null
+translationMethod: site
+type: verbb\supertable\fields\SuperTableField

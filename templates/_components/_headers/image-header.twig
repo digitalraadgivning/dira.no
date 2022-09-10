@@ -1,0 +1,5 @@
+{% import 'macro/focal_point_image' as focalMacro %}
+
+<section class="image-header">
+    <div style="{{ image is defined and image ? focalMacro.pointImage(image) }}"></div>
+</section>

@@ -1,0 +1,28 @@
+columnSuffix: dnyqbygc
+contentColumnType: text
+fieldGroup: 7dd8487c-66de-4727-b79c-ff46e46ffcd3 # Common - Simple Content
+handle: csContent
+instructions: ''
+name: 'Page Content'
+searchable: false
+settings:
+  availableTransforms: '*'
+  availableVolumes: '*'
+  cleanupHtml: true
+  columnType: text
+  configSelectionMode: choose
+  defaultTransform: ''
+  manualConfig: ''
+  purifierConfig: ''
+  purifyHtml: '1'
+  redactorConfig: Standard.json
+  removeEmptyTags: '1'
+  removeInlineStyles: '1'
+  removeNbsp: '1'
+  showHtmlButtonForNonAdmins: ''
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  uiMode: enlarged
+translationKeyFormat: null
+translationMethod: none
+type: craft\redactor\Field

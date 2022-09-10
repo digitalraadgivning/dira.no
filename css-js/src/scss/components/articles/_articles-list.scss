@@ -1,0 +1,132 @@
+.articles-list {
+    margin-top: 42px;
+
+    @include media-up(m) {
+        margin-top: 52px;
+    }
+
+    .articles {
+
+        .featured {
+            overflow: hidden;
+
+            a {
+
+                &:hover {
+
+                    .les-mer {
+                        color: $blue;
+                    }
+                }
+            }
+
+            .in {
+                position: relative;
+                display: flex;
+                width: 100%;
+                background: $white;
+            }
+
+            .img {
+                flex-shrink: 0;
+                width: 40%;
+                background: 50% / cover no-repeat;
+                clip-path: polygon(0 0, 79% 0, 100% 100%, 0 100%);
+            }
+
+            .first-content {
+                position: relative;
+                padding: 27px 25px;
+
+                @include media-up(m) {
+                    padding: 60px;
+                }
+
+                @include media-up(xl) {
+                    padding: 105px 150px 105px 60px;
+                }
+
+                & > div {
+                    position: relative;
+                    z-index: 2;
+                }
+
+                //&::before {
+                //    position: absolute;
+                //    content: '';
+                //    left: 0; top: 0;
+                //    height: 2000px; width: 400px;
+                //    background: $white;
+                //    transform: rotate(-15deg) translate(179px, -50px);
+                //
+                //    @media (min-width: 375px) {
+                //        transform: rotate(-15deg) translate(195px, -50px);
+                //    }
+                //
+                //    @include media-up(s) {
+                //        transform: rotate(-15deg) translate(220px, -50px);
+                //    }
+                //}
+
+                .first-excerpt {
+                    margin-top: 10px;
+
+                    @include media-up(xl) {
+                        padding-right: 100px;
+                    }
+                }
+            }
+
+            .les-mer {
+                display: none;
+                transition: .2s;
+
+                @include media-up(m) {
+                    display: block;
+                    margin-top: 10px;
+                    font-size: 14px;
+                    font-weight: 800;
+                    text-decoration: underline;
+                }
+
+                @include media-up(l) {
+                    font-size: 16px;
+                }
+
+                @include media-up(xl) {
+                    margin-top: 17px;
+                }
+            }
+
+            .new-article-tag {
+                display: none;
+
+                @include media-up(m) {
+                    display: inline-block;
+                    position: absolute !important;
+                    right: 0; top: 0;
+                    padding: 8px 27px;
+                    font-size: 20px;
+                    font-weight: 900;
+                    white-space: nowrap;
+                    background: $status_yellow;
+                    clip-path: polygon(0 0, 100% 0, 100% 100%, 11% 100%);
+                }
+            }
+        }
+
+        .rest {
+            margin-top: 33px;
+
+            @include media-up(m) {
+                margin-top: 55px;
+
+                .in-rest {
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin: 0 -10px;
+                }
+            }
+        }
+    }
+}

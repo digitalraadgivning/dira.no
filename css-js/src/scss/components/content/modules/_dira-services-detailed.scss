@@ -1,0 +1,153 @@
+.module-ds-detailed {
+    margin: 74px 0 66px;
+
+    .above-info {
+        padding: 0 30px;
+
+        @include media-up(m) {
+            text-align: center;
+        }
+    }
+
+    .in {
+
+        @include media-up(m) {
+            max-width: 881px;
+            margin: 0 auto;
+        }
+
+        @include media-up(4k) {
+            max-width: 100%;
+        }
+    }
+
+    .ds-title {
+
+        h2 {
+            font-size: 25px;
+
+            @include media-up(l) {
+                font-size: 40px;
+            }
+
+            @include media-up(4k) {
+                font-size: 60px;
+            }
+        }
+    }
+
+    .ds-text {
+        margin: 5px 0 0;
+    }
+
+    .listing {
+        margin: 24px 0 0;
+
+        @include media-up(m) {
+            margin: 40px 0 0;
+        }
+
+        @include media-up(4k) {
+            margin: 80px 0 0;
+        }
+
+        .list-card {
+
+            &:not(:first-child) {
+                margin-top: 5px;
+
+                @include media-up(m) {
+                    margin-top: 10px;
+                }
+            }
+
+            .left {
+                display: none;
+
+                @include media-up(m) {
+                    position: relative;
+                    display: block;
+                    flex-shrink: 0;
+                    padding-right: 35px;
+                    margin-right: 35px;
+
+                    img {
+                        height: 120px;
+                    }
+
+                    &::before {
+                        position: absolute;
+                        content: '';
+                        right: 0; top: 50%;
+                        transform: translateY(-50%);
+                        width: 4px; height: 144px;
+                        background: $grey;
+                    }
+                }
+            }
+
+            .inner {
+                background: $white;
+                padding: 24px 23px 26px 32px;
+
+                @include media-up(m) {
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    min-height: 171px;
+                    padding: 33px 30px 30px 50px;
+                }
+            }
+
+            .right {
+
+                .top {
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+
+                    img {
+                        position: relative;
+                        top: 2px;
+                        height: 38px;
+                        margin: 0 8px 0 0;
+
+                        @include media-up(m) {
+                            display: none;
+                        }
+                    }
+
+                    h3 {
+                        max-width: 100%;
+
+                        @include media-up(l) {
+                            font-size: 34px;
+                        }
+                    }
+                }
+
+                .bot {
+                    margin-top: 5px;
+
+                    a {
+                        font-weight: 800;
+                        text-decoration: underline;
+
+                        &:hover {
+                            color: $blue;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .cta {
+        margin-top: 31px;
+
+        .btn {
+            width: auto;
+            min-width: 199px;
+        }
+    }
+}

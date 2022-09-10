@@ -1,0 +1,13 @@
+<meta property="og:title" content="{{ entry.pageTitle is defined and entry.pageTitle ? entry.pageTitle : entry.title }}" />
+<meta property="og:site_name" content="{{ currentSite.name   }}" />
+<meta property="og:url" content="{{ entry.pageUrl is defined and entry.pageUrl ? entry.pageUrl : entry.url }}" />
+<meta property="og:type" content="website" />
+{% if entry.pageDescription is defined and entry.pageDescription %}
+    <meta property="og:description" content="{{ entry.pageDescription }}" />
+{% endif %}
+{% if entry.pageImage is defined and entry.pageImage and entry.pageImage.one() %}
+    <meta property="og:image" content="{{ entry.pageImage.one().url }}" />
+{% endif %}
+{% if entry.pageImageAlt is defined and entry.pageImageAlt %}
+    <meta property="og:image:alt" content="{{ entry.pageImageAlt }}" />
+{% endif %}

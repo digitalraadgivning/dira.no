@@ -1,0 +1,49 @@
+{% set footerLogo      = siteNav.siteLogo.one() %}
+{% set footerTextBlock = siteFooter.footerTextBlock %}
+{% set footerNav       = siteFooter.siteMenuNav.all() %}
+
+<footer id="footer" class="site-footer">
+    <div class="_wr">
+        <div class="inner">
+            <div class="footer-logo">
+                {% if footerLogo %}
+                    <div class="logo-wrapper">
+                        <a href="{{ siteUrl }}">
+                            <img src="{{ footerLogo.url }}" alt="{{ currentSite.name }}" />
+                        </a>
+                    </div>
+                {% endif %}
+            </div>
+            <div class="content">
+                {% if footerTextBlock %}
+                    <div class="footer-text">
+                        {{ footerTextBlock }}
+                    </div>
+                {% endif %}
+                {% if footerNav | length %}
+                    <ul class="menu">
+                        {% for menuItem in footerNav %}
+                            {% if menuItem.type == 'entryField' %}
+                                {% set current_entry = menuItem.entryLink.one() %}
+                                {% set bold          = menuItem.bold %}
+                                {% set entryName     = menuItem.entryName %}
+
+                                <li{% if current_entry.url is same as(entry.url) %} class="active"{% endif %}>
+                                    <a href="{{ current_entry.url }}" class="{{ bold ? 'bold' }}">{{ entryName ?: current_entry.title }}</a>
+                                </li>
+                            {% endif %}
+                            {% if menuItem.type == 'typeLink' %}
+                                {% set openInNewTab = menuItem.openInNewTab %}
+                                {% set bold          = menuItem.bold %}
+
+                                <li>
+                                    <a href="{{ menuItem.menuItemUrl ?: '' }}" target="{{ openInNewTab ? '_blank' }}" class="{{ bold ? 'bold' }}">{{ menuItem.menuItemText ?: '' }}</a>
+                                </li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</footer>

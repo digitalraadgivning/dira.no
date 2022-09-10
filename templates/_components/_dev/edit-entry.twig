@@ -1,0 +1,5 @@
+{% if currentUser and currentUser.admin %}
+    <a href="{{ entry.cpEditUrl }}" target="_blank" class="dev-edit-entry">
+        Edit Page
+    </a>
+{% endif %}

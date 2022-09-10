@@ -1,0 +1,17 @@
+{% set bodyClass = 'customers-page' %}
+{% extends "_layouts/base" %}
+
+{% set entries = craft.entries()
+    .section('customers')
+    .all() %}
+
+{% block main %}
+
+    <div class="page-wrapper">
+        {% include '_components/_headers/normal-page-header' %}
+        {% include '_components/_customers/list' with {
+            entries: entries
+        } %}
+    </div>
+
+{% endblock %}

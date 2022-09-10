@@ -1,0 +1,232 @@
+field: 48b393c6-8937-4f82-9402-a1d6bd982171 # Page Content
+fieldLayouts:
+  5ffdc1a2-5856-40d1-ab8d-a252944b4356:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 15215e08-90f2-4855-9648-6d888dc28949 # Image in White
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: f50435e8-6ffd-4354-8b8a-305e2cbc61b2 # Text in White
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: d60ec317-803c-46fa-b7c7-afb64e24faa1 # Add Text Signature
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 05d883a7-5b0d-4af1-9083-a590140f56a0 # Entry Link
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: 262f6609-b257-41a4-9d51-239c9ebf11a0 # Custom URL
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: 55d65819-0bab-4e39-afc0-3c3822775728 # Custom Label
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: ba02dee5-fb5b-452f-aa26-d867eb90408f # Module ID
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  05d883a7-5b0d-4af1-9083-a590140f56a0: # Entry Link
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: entryLink
+    instructions: ''
+    name: 'Entry Link'
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      limit: '1'
+      localizeRelations: false
+      selectionLabel: ''
+      showSiteMenu: true
+      source: null
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+  55d65819-0bab-4e39-afc0-3c3822775728: # Custom Label
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: customLabel
+    instructions: ''
+    name: 'Custom Label'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  262f6609-b257-41a4-9d51-239c9ebf11a0: # Custom URL
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: customUrl
+    instructions: 'Entry link has priority to Custom Url.'
+    name: 'Custom URL'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  15215e08-90f2-4855-9648-6d888dc28949: # Image in White
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: imageInWhite
+    instructions: 'Add image in white part of the block.'
+    name: 'Image in White'
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:5258e7de-fdc7-487f-9a45-2e567a7b1251' # Images
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      previewMode: full
+      restrictFiles: '1'
+      selectionLabel: ''
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:8dec0694-79e6-43cf-9898-1f9633496ab5' # Videos
+      singleUploadLocationSubpath: ''
+      source: null
+      sources:
+        - 'volume:5258e7de-fdc7-487f-9a45-2e567a7b1251' # Images
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  ba02dee5-fb5b-452f-aa26-d867eb90408f: # Module ID
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: moduleId
+    instructions: ''
+    name: 'Module ID'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  d60ec317-803c-46fa-b7c7-afb64e24faa1: # Add Text Signature
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: textSignature
+    instructions: 'Add signature under text, if exists.'
+    name: 'Add Text Signature'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  f50435e8-6ffd-4354-8b8a-305e2cbc61b2: # Text in White
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: textInWhite
+    instructions: 'Add text information.'
+    name: 'Text in White'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '2'
+      multiline: '1'
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: ctaWithInfo
+name: 'CTA Block With Info'
+sortOrder: 8

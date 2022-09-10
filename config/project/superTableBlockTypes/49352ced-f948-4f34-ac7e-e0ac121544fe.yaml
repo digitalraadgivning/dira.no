@@ -1,0 +1,127 @@
+field: b9738930-bf20-480c-a40c-9ce74ecb818f # Header Help Desk
+fieldLayouts:
+  296a01e4-c131-4484-8bdd-6dce70f294fc:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 4efa5f34-e1d0-49d8-a290-fea288342d28 # Description Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 8c09a85d-b9e4-4e62-818c-9feff9987cfc # Entry Link
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: e43e3cc9-599a-4be2-816e-e6a3c36dc896 # Custom URL
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: a288d9a4-12b4-41c7-807b-7d1429b2a572 # Custom Link Label
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  4efa5f34-e1d0-49d8-a290-fea288342d28: # Description Title
+    columnSuffix: znsdxsgr
+    contentColumnType: text
+    fieldGroup: null
+    handle: descTitle
+    instructions: ''
+    name: 'Description Title'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  8c09a85d-b9e4-4e62-818c-9feff9987cfc: # Entry Link
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: entryLink
+    instructions: 'If this and custom URL is selected, entry will have priority.'
+    name: 'Entry Link'
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      limit: '1'
+      localizeRelations: false
+      selectionLabel: ''
+      showSiteMenu: false
+      source: null
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+  a288d9a4-12b4-41c7-807b-7d1429b2a572: # Custom Link Label
+    columnSuffix: mgyfblrb
+    contentColumnType: text
+    fieldGroup: null
+    handle: customLinkLabel
+    instructions: ''
+    name: 'Custom Link Label'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  e43e3cc9-599a-4be2-816e-e6a3c36dc896: # Custom URL
+    columnSuffix: ykkmosrw
+    contentColumnType: text
+    fieldGroup: null
+    handle: customUrl
+    instructions: 'If entry is also selected, entry will have priority.'
+    name: 'Custom URL'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText

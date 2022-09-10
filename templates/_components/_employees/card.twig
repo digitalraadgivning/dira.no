@@ -1,0 +1,37 @@
+{% import 'macro/focal_point_image' as focalMacro %}
+
+{% set empName  = employee.title %}
+{% set empImage = employee.sdImage.one() %}
+{% set empTitle = employee.personTitle %}
+{% set empPhone = employee.personPhone %}
+
+<div class="card js-card -employees">
+    <div class="in">
+        <div class="content">
+            <div class="img-wrapper">
+                <div class="img" style="{{ focalMacro.pointImage(empImage) }}"></div>
+            </div>
+            <div class="content-part">
+                <div class="card-title">
+                    <h3>{{ empName }}</h3>
+                </div>
+                {% if empTitle or empPhone %}
+                    <div class="info">
+                        {% if empTitle %}
+                            <div class="emp-title">
+                                {{ empTitle }}
+                            </div>
+                        {% endif %}
+                        {% if empPhone %}
+                            <div class="emp-phone">
+                                <a href="tel:{{ empPhone }}" target="_blank">
+                                    {{ empPhone }}
+                                </a>
+                            </div>
+                        {% endif %}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>

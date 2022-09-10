@@ -1,0 +1,129 @@
+fieldLayouts:
+  b3741981-47f0-4092-871c-295c0da08763:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\EntryTitleField
+            warning: null
+            width: 100
+          -
+            fieldUid: 2ffa2566-2460-463b-afca-80797ba55fcb # Header Image
+            instructions: ''
+            label: ''
+            required: '1'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            type: craft\fieldlayoutelements\HorizontalRule
+          -
+            fieldUid: 4368eab1-00a0-49d0-a574-5b60f62114c4 # Header Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: 73929375-2a00-426e-afd8-1e3a9cb6c73f # Header Text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+        name: 'Header Data'
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: 48b393c6-8937-4f82-9402-a1d6bd982171 # Page Content
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: 'Page Content'
+        sortOrder: 2
+      -
+        elements:
+          -
+            fieldUid: 70b04be1-ca61-4f64-8983-47f37be11675 # Page Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 30d7b80d-5ede-47a8-8b53-9a193547c750 # Page Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 7cec95cc-1712-4f28-b46f-812763ed6230 # Page URL
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: b395b4bc-4cdd-4edf-a06c-5c3ed9e758cb # Page Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: ba9a3316-329c-4df5-8ddd-9abc7ac9f7d7 # Page Image Alt
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+        name: 'Page SEO'
+        sortOrder: 3
+handle: home
+hasTitleField: true
+name: Home
+section: d7136f58-9984-4fc0-9d38-0f5fd8bad147 # Home
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

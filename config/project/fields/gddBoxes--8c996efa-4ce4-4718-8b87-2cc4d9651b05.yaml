@@ -1,0 +1,56 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 668d7ba4-39e2-4a10-80a8-51637517741b # Globals - Driftsmeldinger Data
+handle: gddBoxes
+instructions: ''
+name: 'Driftsmeldinger List Boxes'
+searchable: false
+settings:
+  columns:
+    __assoc__:
+      -
+        - 2edfe7b7-d4f7-43af-9f36-348de5758a57 # Box Title
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 5efe7a00-4dc8-42ef-afd2-c9da2657544f # Underline Title?
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 16998436-1ecb-4524-980b-0d8f4541ffc1 # Remove Grey Line Under Title?
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 724f0bd4-fbd2-43f0-a05b-d49b1e6458e9 # Box Alert Color?
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - d7df0331-9b52-43af-9120-23a536377367 # Box Info
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_gddboxes}}'
+  fieldLayout: row
+  maxRows: ''
+  minRows: ''
+  placeholderKey: null
+  propagationMethod: all
+  selectionLabel: 'Add Driftsmeldinger Box'
+  staticField: ''
+translationKeyFormat: null
+translationMethod: site
+type: verbb\supertable\fields\SuperTableField

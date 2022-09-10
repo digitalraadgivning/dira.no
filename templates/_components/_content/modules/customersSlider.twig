@@ -1,0 +1,92 @@
+{% import 'macro/focal_point_image' as focalMacro %}
+
+{% set isServicePage    = entry.section.handle %}
+{% set kunderPage       = craft.entries.section('customersPage').one() %}
+{% set initialService   = module.initialService.one() ?: isServicePage == 'services' ? entry : null %}
+{% set showEverything   = initialService ? false : true %}
+{% set moduleTitle      = module.moduleTitle %}
+{% set moduleId         = module.moduleId %}
+{% set customers        = craft.entries.section('customers').limit(-1).all() %}
+{% set serviceFilters   = [] %}
+{% set filteredSFilters = [] %}
+
+{% for c in customers %}
+    {% set relatedServices = c.relatedServices.all() %}
+
+    {% if relatedServices | length %}
+        {% for rs in relatedServices %}
+                {% if initialService and rs.slug == initialService.slug %}
+                    {% set showEverything = true %}
+                {% endif %}
+                {% set serviceFilters = serviceFilters | merge([[rs.title, rs.slug]]) %}
+            {% endfor %}
+    {% endif %}
+{% endfor %}
+
+{% for value in serviceFilters %}
+    {% if value not in filteredSFilters %}
+        {% set filteredSFilters = filteredSFilters | merge([value]) %}
+    {% endif %}
+{% endfor %}
+
+{% if showEverything and customers | length and filteredSFilters | length %}
+    <section class="module articles-slider -customers">
+        <div class="related-entries">
+            <div class="_wr">
+                <div class="small-title center" style="margin: 0 0 20px;">
+                    <h3>{{ moduleTitle ?: 'Våre kunder' }}</h3>
+                </div>
+                <div class="articles-header" style="margin-top: 0;">
+                    <div class="article-tags" style="padding: 0 20px 20px; margin-top: 0;">
+                        <ul>
+                            <li class="tag">
+                                <a href="javascript:;" class="js-kunder-filters{{ not initialService ? ' active' }}" data-filter="">Alle</a>
+                            </li>
+                            {% for fs in filteredSFilters %}
+                                <li class="tag">
+                                    <a href="javascript:;" class="js-kunder-filters{{ initialService and initialService.slug == fs[1] ? ' active' }}" data-filter="{{ fs[1] }}">{{ fs[0] }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                <div class="entries">
+                    <div class="swiper js-kunder-related-swiper">
+                        <div class="swiper-wrapper">
+                            {% for rEntry in customers %}
+                                {% set rTitle      = rEntry.title %}
+                                {% set rUrl        = rEntry.url %}
+                                {% set rExc        = rEntry.articleExcerpt | nl2br %}
+                                {% set rImg        = rEntry.articleImage.one() %}
+                                {% set placeholder = siteUrl('assets/build/src/img/article-placeholder.jpg') %}
+                                {% set rServices   = rEntry.relatedServices.all() %}
+
+                                <div class="swiper-slide type-kunder{% if rServices | length %}{% for r in rServices %} test {{ r.slug }}{% endfor %}{% endif %}">
+                                    <a href="{{ rUrl }}" class="in">
+                                        <div class="img" style="{{ rImg ? focalMacro.pointImage(rImg) : 'background-image: url(' ~ placeholder ~ ')' }}"></div>
+                                        <div class="r-content">
+                                            <h3>{{ rTitle }}</h3>
+                                            {% if rExc %}
+                                                <div class="excerpt">
+                                                    {{ rExc | raw }}
+                                                </div>
+                                            {% endif %}
+                                            <div class="les-mer">
+                                                <span>Les mer</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <div class="cta">
+                    <a href="{{ kunderPage.url }}" class="btn grey">
+                        {{ kunderPage.title }}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endif %}

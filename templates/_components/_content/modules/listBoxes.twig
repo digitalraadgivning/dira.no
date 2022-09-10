@@ -1,0 +1,42 @@
+{% set boxesTitle = module.boxesTitle %}
+{% set listBoxes  = module.listBoxes.all() %}
+{% set moduleId   = module.moduleId %}
+
+{% if listBoxes | length %}
+    <section class="module module-list-boxes">
+        {% if boxesTitle %}
+            <div class="boxes-title">
+                <h2>{{ boxesTitle }}</h2>
+            </div>
+        {% endif %}
+        <div class="inner count-{{ listBoxes | length }}">
+            {% for box in listBoxes %}
+                {% set boxTitle               = box.boxTitle %}
+                {% set underlineTitle         = box.underlineTitle %}
+                {% set removeGrey             = box.removeGrey %}
+                {% set boxInfo                = box.boxInfo | nl2br %}
+                {% set buttonEntryUrlOptional = box.buttonEntryUrlOptional.one() %}
+                {% set buttonUrlOptional      = box.buttonUrlOptional %}
+                {% set buttonLabelOptional    = box.buttonLabelOptional %}
+
+                <div class="box">
+                    <div class="in">
+                        <div class="box-title{{ underlineTitle ? ' underline' }}{{ removeGrey ? ' remove-grey' }}">
+                            <h3>{{ boxTitle }}</h3>
+                        </div>
+                        <div class="box-info">
+                            {{ boxInfo }}
+                        </div>
+                        {% if buttonEntryUrlOptional or buttonUrlOptional %}
+                            <div class="box-button">
+                                <a href="{{ buttonEntryUrlOptional ? buttonEntryUrlOptional.url : buttonUrlOptional }}" class="btn" target="{{ buttonUrlOptional and not buttonEntryUrlOptional ? '_blank' }}">
+                                    {{ buttonLabelOptional ?: 'Les mer' }}
+                                </a>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+{% endif %}

@@ -1,0 +1,50 @@
+{% import 'macro/focal_point_image' as focalMacro %}
+
+{% set seImage = entry.seImage.one() %}
+{% set seText  = entry.seText | nl2br %}
+
+<section class="articles-list -employees">
+    <div class="_wr">
+        <div class="inner">
+            <div class="top">
+                {% if seText %}
+                    <div class="top-inner">
+                        <div class="top-content">
+                            <div class="left">
+                                {{ seText | raw }}
+                            </div>
+                            {% if seImage %}
+                                <div class="top-img-wrapper">
+                                    <div class="top-img" style="{{ focalMacro.pointImage(seImage) }}"></div>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+            <div class="bot">
+                {% if entries | length %}
+                    <div class="bot-title center">
+                        <h3>Våre ansatte</h3>
+                    </div>
+                    <div class="employees">
+                        <div class="employees-list">
+                            <div class="in-rest">
+                                {% for employee in entries %}
+                                    {% include '_components/_employees/card' with {
+                                        employee: employee,
+                                        index: loop.index
+                                    } %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                {% else %}
+                    <div class="no-result center" style="margin-top: 2em;">
+                        <h2>Det er ingen informasjon om ansatte for øyeblikket.</h2>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>

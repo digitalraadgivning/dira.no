@@ -1,0 +1,65 @@
+{% import 'macro/focal_point_image' as focalMacro %}
+
+{% set first = null %}
+{% set rest  = null %}
+
+{% if entries | length %}
+    {% set first        = entries | first %}
+    {% set firstTitle   = first.title %}
+    {% set firstImg     = first.articleImage.one() %}
+    {% set firstExcerpt = first.articleExcerpt | nl2br %}
+    {% set rest         = entries | slice(1) %}
+{% endif %}
+
+<section class="articles-list">
+    <div class="_wr">
+        <div class="inner">
+            {% if entries | length %}
+                <div class="articles">
+                    <div class="featured">
+                        <a href="{{ first.url }}">
+                            <div class="in">
+                                <div class="img" style="{{ focalMacro.pointImage(firstImg) }}"></div>
+                                <div class="first-content">
+                                    <div class="first-title">
+                                        <h2>{{ firstTitle }}</h2>
+                                    </div>
+                                    <div class="first-excerpt">
+                                        {{ firstExcerpt | raw }}
+                                    </div>
+                                    <div class="les-mer">
+                                        <span>Les mer</span>
+                                    </div>
+                                    <div class="new-article-tag">
+                                        <span>Ny artikkel</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="rest">
+                        <div class="in-rest">
+                            {% for article in rest %}
+                                {% include '_components/_articles/card' with {
+                                    article: article,
+                                    index: loop.index
+                                } %}
+                            {% endfor %}
+                        </div>
+                        {% if rest | length > 10 %}
+                            <div class="load-more js-load-more">
+                                <a href="javascript:;" class="btn arrow">
+                                    Se flere artikler
+                                </a>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            {% else %}
+                <div class="no-result center" style="margin-top: 2em;">
+                    <h2>Det er ingen artikler.</h2>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</section>

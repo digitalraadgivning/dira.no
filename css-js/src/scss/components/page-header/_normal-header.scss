@@ -1,0 +1,65 @@
+.normal-header {
+    margin-top: 40px;
+
+    @include media-up(m) {
+        margin-top: 75px;
+    }
+
+    &.with-image {
+        margin-top: 0;
+    }
+
+    .header-img {
+        background: url(../../src/img/article-placeholder.jpg) 50% / cover no-repeat;
+        height: 0;
+        padding: 0 0 56.25%;
+        margin: 0 0 45px;
+
+        @include media-up(m) {
+            padding: 0 0 33.44%;
+        }
+    }
+
+    .normal-wrapper {
+        margin: 0 auto 45px;
+
+        .brand-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+            img {
+                height: 55px;
+
+                @include media-up(m) {
+                    height: 65px;
+                }
+
+                @include media-up(xl) {
+                    height: 95px;
+                }
+
+                @include media-laptop {
+                    height: 65px;
+                }
+            }
+
+            span {
+                margin-left: 20px;
+
+                @include media-down(s) {
+                    line-break: anywhere;
+                }
+
+                @include media-up(xl) {
+                    margin-left: 40px;
+                }
+
+                &::before {
+                    display: none;
+                }
+            }
+        }
+    }
+}

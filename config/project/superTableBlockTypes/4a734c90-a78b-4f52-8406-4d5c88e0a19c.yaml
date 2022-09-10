@@ -1,0 +1,67 @@
+field: 3a85c090-03fa-4b9c-ae60-4a6c49b7b318 # Sidebar FAQ
+fieldLayouts:
+  00a001c2-a32b-4000-af5f-f08f33b9e052:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 09ceb341-b5a9-4e3b-ac59-7e75640530e9 # FAQ Question
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 7db5c248-29af-45a7-8d4f-a746e0a2717f # FAQ Answer
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  7db5c248-29af-45a7-8d4f-a746e0a2717f: # FAQ Answer
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: faqAnswer
+    instructions: ''
+    name: 'FAQ Answer'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '2'
+      multiline: '1'
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  09ceb341-b5a9-4e3b-ac59-7e75640530e9: # FAQ Question
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: faqQuestion
+    instructions: ''
+    name: 'FAQ Question'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText

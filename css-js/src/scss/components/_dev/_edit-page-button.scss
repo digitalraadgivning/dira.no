@@ -1,0 +1,11 @@
+.dev-edit-entry {
+    position: fixed;
+    left: 0; bottom: 0;
+    padding: 10px;
+    line-height: 1;
+    font-weight: 700;
+    font-size: 12px;
+    background: $black;
+    color: $white;
+    z-index: 10000;
+}

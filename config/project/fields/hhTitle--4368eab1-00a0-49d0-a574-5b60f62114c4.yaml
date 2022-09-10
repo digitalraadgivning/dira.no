@@ -1,0 +1,19 @@
+columnSuffix: ofhkenen
+contentColumnType: text
+fieldGroup: fd739832-07b5-48f8-b324-f892f7474a3d # Header - Home
+handle: hhTitle
+instructions: ''
+name: 'Header Title'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '2'
+  multiline: '1'
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

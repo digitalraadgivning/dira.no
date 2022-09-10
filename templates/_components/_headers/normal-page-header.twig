@@ -1,0 +1,17 @@
+{% import 'macro/focal_point_image' as focalMacro %}
+
+{% set hpImage = entry.hpImage is defined and entry.hpImage ? entry.hpImage.one() : false %}
+{% set title   = entry.title %}
+
+<section class="normal-header{{ hpImage ? ' with-image' }}">
+    {% if hpImage %}
+        <div class="header-img" style="{{ focalMacro.pointImage(hpImage) }}"></div>
+    {% endif %}
+    <div class="_wr">
+        <div class="inner center">
+            <h1 class="brand-header grey">
+                <span>{{ title }}</span>
+            </h1>
+        </div>
+    </div>
+</section>

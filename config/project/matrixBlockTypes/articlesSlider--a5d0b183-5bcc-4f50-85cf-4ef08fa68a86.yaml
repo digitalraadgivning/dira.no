@@ -1,0 +1,41 @@
+field: 48b393c6-8937-4f82-9402-a1d6bd982171 # Page Content
+fieldLayouts:
+  8cc5143e-6375-4473-a1b8-ede9a4144079:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 4300ee96-6132-4b62-a001-8a76366edd02 # Module ID
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  4300ee96-6132-4b62-a001-8a76366edd02: # Module ID
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: moduleId
+    instructions: ''
+    name: 'Module ID'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: articlesSlider
+name: 'Articles Slider'
+sortOrder: 7

@@ -1,0 +1,19 @@
+columnSuffix: kzbhwasv
+contentColumnType: text
+fieldGroup: 4832dfa7-3f48-4582-888b-f8351737ec61 # Structure - Dira Articles
+handle: articleExcerpt
+instructions: 'Short article description that will be shown on article cards.'
+name: 'Article Excerpt'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: '1'
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

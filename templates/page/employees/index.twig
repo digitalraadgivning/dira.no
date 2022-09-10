@@ -1,0 +1,17 @@
+{% set bodyClass = 'om-oss-page' %}
+{% extends "_layouts/base" %}
+
+{% set entries = craft.entries()
+    .section('employees')
+    .all() %}
+
+{% block main %}
+
+    <div class="page-wrapper">
+        {% include '_components/_headers/normal-page-header' %}
+        {% include '_components/_employees/list' with {
+            entries: entries
+        } %}
+    </div>
+
+{% endblock %}

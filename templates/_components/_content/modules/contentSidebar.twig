@@ -1,0 +1,66 @@
+{% set serviceIcon        = entry.serviceIcon.one() %}
+{% set content            = module.leftContent %}
+{% set hideTitle          = module.hideTitle %}
+{% set showContactInfo    = module.showContactInfo %}
+{% set customContactTitle = module.customContactTitle %}
+{% set showRestOfServices = module.showRestOfServices %}
+{% set sidebarFaq         = module.sidebarFaq.all() %}
+{% set moduleId           = module.moduleId %}
+
+<section class="module module-content-sidebar">
+    <div class="_wr">
+        <div class="_w">
+            <div class="left">
+                <div class="in">
+                    {% if not hideTitle %}
+                        <div class="service-title">
+                            <h1 class="brand-header">
+                                <img src="{{ serviceIcon ? serviceIcon.url : siteUrl('assets/build/src/img/logo-placeholder.png') }}" alt="{{ siteName }}">
+                                <span>
+                                    {{ entry.title }}
+                                </span>
+                            </h1>
+                        </div>
+                    {% endif %}
+                    <div class="redactor-content">
+                        {{ content }}
+                        {% if showContactInfo %}
+                            {% include '_components/_partials/global-contact-block' with {
+                                customMsg: customContactTitle
+                            } %}
+                        {% endif %}
+                        {% if showRestOfServices %}
+                            {% include '_components/_partials/global-services-block' %}
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% if sidebarFaq | length %}
+                <div class="right">
+                    <div class="in">
+                        <div class="sidebar-faqs">
+                            <div class="sidebar-title">
+                                <h3>Ofte stilte spørsmål</h3>
+                            </div>
+                            <div class="faqs">
+                                {% for faq in sidebarFaq %}
+                                    {% set question = faq.faqQuestion %}
+                                    {% set answer   = faq.faqAnswer %}
+
+                                    <div class="faq">
+                                        <a href="javascript:;" class="js-faq-answer">
+                                            {{ question }}
+                                        </a>
+                                        <div class="faq-answer">
+                                            {{ answer }}
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</section>

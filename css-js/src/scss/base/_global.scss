@@ -1,0 +1,47 @@
+#page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+    padding-top: 52px;
+
+    @include media-up(l) {
+        padding-top: 103px;
+    }
+
+    #content {
+        position: relative;
+        flex: 1;
+
+        @include ie {
+            flex-basis: auto;
+        }
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+body {
+    background: $grey;
+
+    &.menu-show {
+        overflow: hidden;
+    }
+
+    &.overflow {
+        overflow: hidden;
+    }
+}
+
+._wr {
+
+    &.-redactor {
+        max-width: 942px;
+
+        @include media-up(4k) {
+            max-width: 1800px;
+        }
+    }
+}

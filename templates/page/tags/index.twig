@@ -1,0 +1,34 @@
+{% set bodyClass = 'articles-page tag-page' %}
+{% set entry     = craft.entries.section('articlesPage').one() %}
+{% extends "_layouts/base" %}
+
+{% set requestedUri = craft.app.request.getPathInfo() %}
+
+{% set tag_id = requestedUri | split('/') | last %}
+
+{% set tag = craft.tags()
+    .id(tag_id)
+    .one() %}
+
+{% if not tag %}
+    {% redirect entry.url %}
+{% endif %}
+
+
+{% set entries = craft.entries()
+    .section('articles')
+    .articleTags(tag_id)
+    .all() %}
+
+{% block main %}
+
+    <div class="page-wrapper">
+        {% include '_components/_headers/articles-header' with {
+            activeTagId: tag_id
+        } %}
+        {% include '_components/_articles/list' with {
+            entries: entries
+        } %}
+    </div>
+
+{% endblock %}

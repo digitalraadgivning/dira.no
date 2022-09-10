@@ -1,0 +1,18 @@
+{% set bodyClass = 'public-page' %}
+{% set isExternal  = entry.isExternalUrl %}
+{% set externalUrl = entry.externalUrl %}
+
+{% if isExternal and externalUrl %}
+    {% redirect externalUrl %}
+{% endif %}
+
+{% extends "_layouts/base" %}
+
+{% block main %}
+
+    <div class="page-wrapper _wr">
+        {% include '_components/_headers/normal-page-header.twig' %}
+        {% include '_components/_content/content' %}
+    </div>
+
+{% endblock %}

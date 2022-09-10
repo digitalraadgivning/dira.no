@@ -1,0 +1,72 @@
+.articles-header {
+    margin-top: 40px;
+
+    @include media-up(m) {
+        margin-top: 45px;
+    }
+
+    .active-tag {
+        margin-top: 25px;
+        color: $blue;
+    }
+
+    .article-tags {
+        margin-top: 32px;
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            li {
+                margin-top: 3px;
+
+                &:not(:last-child) {
+                    margin-right: 5px;
+
+                    &::after {
+                        content: '|';
+                        display: inline-block;
+                        margin-left: 4px;
+                    }
+
+                    @include media-up(m) {
+                        margin-right: 9px;
+
+                        &::after {
+                            margin-left: 8px;
+                        }
+                    }
+                }
+
+                a {
+                    font-size: 12px;
+                    transition: .2s;
+
+                    @include media-up(m) {
+                        font-size: 14px;
+                    }
+
+                    @include media-up(xl) {
+                        font-size: 18px;
+                    }
+
+                    &:hover {
+                        color: $blue;
+                    }
+                }
+
+                &.active,
+                & > a.active {
+
+                    a,
+                    & {
+                        color: $blue;
+                        pointer-events: none;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+{% import 'macro/focal_point_image' as focalMacro %}
+
+<section class="articles-list -customer">
+    <div class="_wr">
+        <div class="inner">
+            {% if entries | length %}
+                <div class="customers">
+                    <div class="customers-list">
+                        <div class="in-rest">
+                            {% for service in entries %}
+                                {% include '_components/_services/card' with {
+                                    service: service,
+                                    index: loop.index
+                                } %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            {% else %}
+                <div class="no-result center" style="margin-top: 2em;">
+                    <h2>Det er ingen informasjon om kunder for øyeblikket.</h2>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</section>

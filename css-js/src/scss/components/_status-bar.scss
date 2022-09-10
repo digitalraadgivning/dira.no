@@ -1,0 +1,99 @@
+.status-bar {
+    position: absolute;
+    left: 0; top: 100%; right: 0;
+    background: $grey;
+    font-weight: 500;
+    transition: .2s .2s;
+
+    .menu-show & {
+        opacity: 0;
+        transform: translateY(-5px);
+        transition: 0s;
+    }
+
+    .status-bar-in {
+        position: relative;
+        max-width: 1426px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .swiper-slide {
+        width: auto;
+        padding: 0 4px;
+        display: flex;
+        align-items: center;
+        height: 37px;
+
+        @include media-up(m) {
+            height: 34px;
+            padding: 0 10px;
+        }
+
+        .status {
+            background: $white;
+            font-weight: 600;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            height: 23px;
+            padding: 0 10px;
+            font-size: 13px;
+
+            .box-color {
+                margin-left: 15px;
+            }
+        }
+    }
+
+    .main-slide {
+        padding-left: 23px;
+        margin-right: 32px;
+
+        @include media-up(m) {
+            padding-left: 30px;
+            margin-right: 33px;
+        }
+
+        a {
+            position: relative;
+            text-decoration: underline;
+            line-height: 37px;
+            font-size: 13px;
+
+            @include media-up(m) {
+                line-height: 34px;
+            }
+
+            .des {
+                display: none;
+                text-decoration: underline;
+
+                @include media-up(m) {
+                    display: inline-block;
+                }
+            }
+
+            .mob {
+
+                @include media-up(m) {
+                    display: none;
+                }
+            }
+
+            &::after {
+                position: absolute;
+                content: '';
+                height: 25px;
+                width: 2px;
+                top: calc(50% - 12px); right: -21px;
+                background: $blue;
+                transform: rotate(-19deg);
+
+                @include media-up(m) {
+                    right: -28px;
+                }
+            }
+        }
+    }
+}

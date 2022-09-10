@@ -1,0 +1,62 @@
+// Colors
+$black: #000;
+$white: #fff;
+
+$blue: #0070ff;
+$grey: #f2f3f5;
+
+$status_green: #6cc733;
+$status_yellow: #ffcd00;
+$status_red: #f34417;
+
+$color-interval:      8% !default;
+$contrast-threshold: 150 !default;
+
+// Fonts
+$default-font: 'Lato', sans-serif;
+
+// Grid
+$grid-breakpoints: (
+    _: 0,
+    xs: 480px,
+    s: 576px,
+    m: 768px,
+    l: 992px,
+    xl: 1280px,
+    xxl: 1396px,
+    4k: 3800px
+) !default;
+
+@include _assert-ascending($grid-breakpoints, '$grid-breakpoints');
+@include _assert-starts-at-zero($grid-breakpoints);
+
+$wrapper-max-widths: (
+    xl: 1426px,
+    4k: 2400px
+) !default;
+
+// Width of single article (or any single entry if needed)
+// Just add class .single-wr next to _wr class
+$single-max-width: 1008px;
+
+@include _assert-ascending($wrapper-max-widths, '$wrapper-max-widths');
+
+$grid-columns:      8 !default;
+$grid-gutter-width: 30px !default;
+
+$mobile-landscape-width: 560px;
+$mobile-landscape-height: 480px;
+
+$narrow-laptop-width: 992px;
+$narrow-laptop-height: 650px;
+
+// Options
+$enable-grid-classes: false !default;
+$enable-print-styles: false !default;
+
+// Print
+$print-page-size:      a3 !default;
+$print-body-min-width: map-get($grid-breakpoints, 'xl') !default;
+
+// Custom
+$fonts_root: '../fonts'

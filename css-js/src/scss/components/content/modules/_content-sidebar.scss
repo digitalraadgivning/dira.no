@@ -1,0 +1,174 @@
+.module-content-sidebar {
+
+    .left,
+    .right {
+        @include col-ready;
+    }
+
+    @include media-up(m) {
+
+        .left {
+            max-width: 60%;
+            flex: 0 0 60%;
+        }
+
+        .right {
+            max-width: 40%;
+            flex: 0 0 40%;
+        }
+    }
+
+    .left {
+
+        .brand-header {
+            display: flex;
+            width: 100%;
+
+            span {
+                display: block;
+                width: 100%;
+                padding-bottom: 5px;
+                border-bottom: 3px solid $grey;
+            }
+
+            img,
+            svg {
+                height: 35px;
+
+                @include media-up(m) {
+                    height: 42px;
+                }
+
+                @include media-up(xl) {
+                    height: 65px;
+                }
+            }
+
+            a,
+            span {
+                margin-left: 20px;
+
+                &::before {
+                    display: none;
+                }
+            }
+
+            @include media-up(xl) {
+                font-size: 60px;
+                line-height: normal;
+
+                a,
+                span {
+                    margin-left: 40px;
+                }
+            }
+        }
+
+        .in {
+            background: $white;
+            padding: 30px;
+
+            @include media-up(m) {
+                padding: 40px 35px;
+            }
+
+            @include media-up(l) {
+                padding: 40px 110px 86px 93px;
+            }
+
+            .global-contact-block {
+                padding: 38px 0;
+                border-width: 3px 0;
+                border-style: solid;
+                border-color: $grey;
+                margin-top: 50px;
+
+                @include media-up(l) {
+                    margin-top: 86px;
+                }
+            }
+        }
+    }
+
+    .right {
+
+        .sidebar-faqs {
+
+            .sidebar-title {
+                padding: 17px 30px 22px;
+            }
+
+            .faqs {
+
+                .faq {
+                    background: $white;
+
+                    &:not(:first-child) {
+                        margin-top: 12px;
+                    }
+
+                    a {
+                        position: relative;
+                        display: block;
+                        padding: 17px 65px 17px 30px;
+                        font-size: 16px;
+                        transition: .2s;
+
+                        @include media-up(l) {
+                            padding: 25px 65px 25px 30px;
+                            font-size: 18px;
+                        }
+
+                        &::before {
+                            position: absolute;
+                            display: block;
+                            content: '';
+                            width: 10px; height: 10px;
+                            right: 30px; top: 20px;
+                            border-width: 2px 2px 0 0;
+                            border-style: solid;
+                            border-color: $black;
+                            transform: rotate(135deg);
+
+                            @include media-up(l) {
+                                width: 12px; height: 12px;
+                                right: 30px; top: 30px;
+                            }
+                        }
+
+                        &.active {
+
+                            &::before {
+                                top: 25px;
+                                transform: rotate(135deg) scale(-1, -1);
+
+                                @include media-up(l) {
+                                    top: 35px;
+                                }
+                            }
+
+                            & + .faq-answer {
+                                display: block;
+                            }
+                        }
+                    }
+
+                    .faq-answer {
+                        position: relative;
+                        display: none;
+                        padding: 25px 30px 20px 30px;
+                        font-size: 15px;
+
+                        &::before {
+                            position: absolute;
+                            content: '';
+                            left: 30px; right: 30px; top: 0;
+                            height: 3px;
+                            background: $grey;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

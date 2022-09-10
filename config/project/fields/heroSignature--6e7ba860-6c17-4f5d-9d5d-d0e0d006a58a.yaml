@@ -1,0 +1,19 @@
+columnSuffix: iprjggcs
+contentColumnType: text
+fieldGroup: b0fd6549-02a5-4fcf-b6e5-cee1a7578a6e # Single - Customers
+handle: heroSignature
+instructions: 'Add small signature under the message.'
+name: 'Hero Signature'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

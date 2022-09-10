@@ -1,0 +1,69 @@
+{% import 'macro/focal_point_image' as focalMacro %}
+
+{% set hhTitle         = entry.hhTitle | nl2br %}
+{% set hhText          = entry.hhText %}
+{% set hhImage         = entry.hhImage.one() %}
+{#{% set hhHelpBoxTitle  = entry.hhHelpBoxTitle %}#}
+{#{% set hhHelpDesk      = entry.hhHelpDesk.all() %}#}
+
+<section class="page-header -home">
+    <div class="_wr">
+        <div class="inner">
+            {% if hhTitle or hhText %}
+                <div class="left">
+                    <div class="header-info">
+                        {% if hhTitle %}
+                            <div class="header-title">
+                                <h1 class="brand-header">
+                                    <span>{{ hhTitle | raw }}</span>
+                                </h1>
+                            </div>
+                        {% endif %}
+                        {% if hhText %}
+                            <div class="header-text">
+                                {{ hhText }}
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endif %}
+            <div class="mid">
+                <div class="header-img" style="{{ focalMacro.pointImage(hhImage) }}"></div>
+            </div>
+{#            {% if hhHelpDesk | length %}#}
+{#                <div class="right">#}
+{#                    <div class="help-desk">#}
+{#                        {% if hhHelpBoxTitle %}#}
+{#                            <div class="help-box-title">#}
+{#                                <p>{{ hhHelpBoxTitle }}</p>#}
+{#                            </div>#}
+{#                        {% endif %}#}
+{#                        <div class="help-boxes">#}
+{#                            {% for box in hhHelpDesk %}#}
+{#                                {% set descTitle       = box.descTitle %}#}
+{#                                {% set entryLink       = box.entryLink.one() %}#}
+{#                                {% set customUrl       = box.customUrl %}#}
+{#                                {% set customLinkLabel = box.customLinkLabel %}#}
+
+{#                                {% if entryLink or customUrl %}#}
+{#                                    <div class="help-box">#}
+{#                                        {% if descTitle %}#}
+{#                                            <div class="box-desc">#}
+{#                                                {{ descTitle }}#}
+{#                                            </div>#}
+{#                                        {% endif %}#}
+{#                                        <div class="box-link">#}
+{#                                            <a href="{{ entryLink ? entryLink.url : customUrl }}" target="{{ customUrl and not entryLink ? '_blank' }}" class="btn">#}
+{#                                                {{ customLinkLabel ?: entryLink ? entryLink.title : 'Les mer' }}#}
+{#                                            </a>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                {% endif %}#}
+{#                            {% endfor %}#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            {% endif %}#}
+        </div>
+    </div>
+</section>

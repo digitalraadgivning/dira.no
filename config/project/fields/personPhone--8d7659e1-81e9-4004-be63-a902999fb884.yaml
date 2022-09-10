@@ -1,0 +1,19 @@
+columnSuffix: iyyjvwiv
+contentColumnType: text
+fieldGroup: c3888ec4-a944-48bf-a9b2-47ba143013f1 # Structure - Dira Employees
+handle: personPhone
+instructions: 'Enter person phone.'
+name: 'Person Phone'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

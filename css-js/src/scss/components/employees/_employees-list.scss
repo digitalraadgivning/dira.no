@@ -1,0 +1,122 @@
+.articles-list {
+
+    &.-employees {
+
+        .top {
+
+            .top-inner {
+
+
+                @include media-down(m) {
+
+                    .top-content {
+                        display: flex;
+                        flex-wrap: wrap;
+                        padding: 30px 35px;
+                        background: $white;
+                        overflow: hidden;
+                    }
+
+                    .left {
+                        order: 1;
+                        margin-top: 21px;
+                    }
+
+                    .top-img-wrapper {
+                        width: 100%;
+                        order: 0;
+                    }
+
+                    .top-img {
+                        height: 0;
+                        padding: 0 0 61.78%;
+                        width: 100%;
+                        background: 50% / cover no-repeat;
+                    }
+                }
+
+                @include media-up(m) {
+
+                    .top-content {
+                        display: flex;
+                        background: $white;
+                        overflow: hidden;
+                    }
+
+                    .left {
+                        padding: 30px 35px;
+                    }
+
+                    .top-img-wrapper {
+                        width: 34%;
+                        flex-shrink: 0;
+
+                        .top-img {
+                            height: 100%; width: 100%;
+                            background: 50% / cover no-repeat;
+                            clip-path: polygon(0 0, 100% 0, 100% 100%, 27% 100%);
+                        }
+                    }
+                }
+
+                @include media-up(l) {
+
+                    .left {
+                        padding: 40px 50px;
+                    }
+                }
+
+                @include media-up(xl) {
+
+                    .left {
+                        font-size: 22px;
+                        padding: 68px 38px 55px 63px;
+                    }
+                }
+            }
+        }
+
+        .bot {
+            margin-top: 43px;
+
+            @include media-up(m) {
+                margin-top: 70px;
+            }
+
+            .bot-title {
+                display: none;
+
+                @include media-up(m) {
+                    display: block;
+                    margin: 0 0 20px;
+                }
+
+                @include media-up(xl) {
+                    margin: 0 0 -80px;
+                }
+            }
+
+            .employees {
+                padding: 0 35px;
+
+                @include media-up(m) {
+                    padding: 0;
+                }
+            }
+
+            .in-rest {
+                display: flex;
+                flex-wrap: wrap;
+                margin: 0 -8px;
+
+                @include media-up(l) {
+                    margin: 0 0 -16px;
+                }
+
+                @include media-up(xl) {
+                    margin: 0 0 -66px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,27 @@
+defaultPlacement: beginning
+enableVersioning: true
+handle: articles
+name: 'Dira Articles'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  27aff492-2400-42d9-878a-bd134e93ebd6: # $DEFAULT_SITE_NAME
+    enabledByDefault: true
+    hasUrls: true
+    template: page/articles/single
+    uriFormat: 'artikler/{slug}'
+structure:
+  maxLevels: 1
+  uid: 1c2af882-3c9c-48d6-9833-24fed62ee1c3
+type: structure

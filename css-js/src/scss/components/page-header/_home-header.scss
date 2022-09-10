@@ -1,0 +1,235 @@
+.page-header {
+    //margin-top: 30px;
+
+    &.-home {
+
+        @include media-up(m) {
+            background: $white;
+            overflow: hidden;
+
+            ._wr {
+
+            }
+        }
+
+        .inner {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+
+            @include media-down(m) {
+
+                .mid {
+                    order: 0;
+                    width: 100%;
+                }
+
+                .left {
+                    order: 1;
+                    width: 100%;
+                }
+
+                .right {
+                    order: 2;
+                    width: 100%;
+                }
+            }
+        }
+
+        .header-img {
+            height: 0;
+            padding: 0 0 77.27%;
+            background: 50% / cover no-repeat;
+        }
+
+        .left {
+            padding: 23px 33px 40px;
+            background: $white;
+
+            .header-text {
+                margin-top: 10px;
+
+                a {
+                    text-decoration: underline;
+                    transition: .2s;
+
+                    &:hover {
+                        color: $blue;
+                    }
+                }
+
+                @include media-up(m) {
+                    margin-top: 20px;
+                    font-weight: 500;
+                }
+            }
+
+            @include media-up(m) {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                width: 45%;
+                padding: 150px 40px 150px 0;
+                min-height: calc(100vh - 82px);
+                min-height: calc((var(--vh, 1vh) * 100) - 82px);
+                z-index: 2;
+
+                .header-info {
+                    position: relative;
+                    z-index: 2;
+                }
+
+                &::before {
+                    position: absolute;
+                    content: '';
+                    background: $white;
+                    left: calc(100% - 1248px); top: -160px;
+                    width: 2000px; height: 6000px;
+                    transform: rotate(-15.5deg);
+
+                    @include media-up(l) {
+                        left: calc(100% - 1003px); top: -160px;
+                        transform: rotate(-20.5deg);
+                    }
+                }
+            }
+
+            @include media-up(l) {
+                width: 52%;
+                padding: 150px 0;
+                min-height: calc(100vh - 133px);
+                min-height: calc((var(--vh, 1vh) * 100) - 133px);
+            }
+
+            @include media-up(xl) {
+                width: 60%;
+            }
+        }
+
+        .mid {
+
+            @include media-up(m) {
+                position: relative;
+                width: 55%;
+
+                .header-img {
+                    position: absolute;
+                    left: 0; top: 0;
+                    height: 100%; width: calc(50vw + 8%);
+                    padding: 0;
+                }
+            }
+
+            @include media-up(l) {
+                width: 48%;
+
+                .header-img {
+                    width: calc(50vw - 5%);
+                }
+            }
+
+            @include media-up(xl) {
+                width: 40%;
+
+                .header-img {
+                    width: calc(50vw - 26%);
+                }
+            }
+        }
+
+        .right {
+            margin-top: 32px;
+
+            .help-desk {
+                background: $white;
+                padding: 24px 30px 35px;
+
+                .help-box-title {
+                    font-size: 25px;
+                    line-height: 35px;
+                    font-weight: 800;
+                }
+
+                .box-desc {
+                    font-size: 18px;
+                    line-height: normal;
+                    font-weight: 700;
+                    margin-top: 15px;
+                }
+
+                .help-box {
+
+                    &:not(:first-child) {
+                        margin-top: 9px;
+                    }
+                }
+
+                .box-link {
+                    margin-top: 10px;
+                }
+            }
+
+            @include media-up(m) {
+                position: absolute;
+                right: 0; top: 50%;
+                transform: translateY(-50%);
+                color: $white;
+                text-align: center;
+                margin-top: 0;
+
+                .help-desk {
+                    background: transparent;
+                    padding: 24px 30px 35px;
+
+                    .help-box-title {
+                        text-shadow: 0 2px 15px rgba($black, .85);
+                    }
+
+                    .box-desc {
+                        text-shadow: 0 2px 15px rgba($black, .85);
+                    }
+
+                    .help-box {
+
+                        &:not(:first-child) {
+                            margin-top: 9px;
+
+                            & > .box-link:first-child {
+                                margin-top: 21px;
+                                padding-top: 22px;
+                                position: relative;
+
+                                &::before {
+                                    position: absolute;
+                                    content: '';
+                                    left: 50%; top: 0;
+                                    width: 105px; height: 2px;
+                                    background: $white;
+                                    transform: translateX(-50%);
+                                }
+                            }
+                        }
+                    }
+
+                    .box-link {
+                        margin-top: 10px;
+
+                        .btn {
+                            background: transparent;
+                            border-color: $white;
+                            box-shadow: 0 2px 15px 0 rgba($black, .16);
+                            color: $white;
+
+                            &:hover {
+                                color: $white;
+                                background: rgba(242, 243, 245, .15);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,19 @@
+columnSuffix: ovmpyjbm
+contentColumnType: text
+fieldGroup: 827b0b82-a3da-44b5-9f6e-cec83a636de2 # Single - Employees
+handle: seText
+instructions: ''
+name: 'Text in White Box'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: '1'
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

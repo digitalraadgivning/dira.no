@@ -1,0 +1,28 @@
+columnSuffix: zdxphefp
+contentColumnType: text
+fieldGroup: fd739832-07b5-48f8-b324-f892f7474a3d # Header - Home
+handle: hhText
+instructions: ''
+name: 'Header Text'
+searchable: false
+settings:
+  availableTransforms: '*'
+  availableVolumes: ''
+  cleanupHtml: true
+  columnType: text
+  configSelectionMode: choose
+  defaultTransform: ''
+  manualConfig: ''
+  purifierConfig: ''
+  purifyHtml: '1'
+  redactorConfig: Simple.json
+  removeEmptyTags: '1'
+  removeInlineStyles: '1'
+  removeNbsp: '1'
+  showHtmlButtonForNonAdmins: ''
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  uiMode: enlarged
+translationKeyFormat: null
+translationMethod: none
+type: craft\redactor\Field

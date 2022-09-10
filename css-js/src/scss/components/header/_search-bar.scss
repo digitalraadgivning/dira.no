@@ -1,0 +1,62 @@
+.search-bar {
+    margin: 0 30px 0 auto;
+    display: none;
+
+    @include media-up(l) {
+        display: block;
+    }
+
+    form {
+        position: relative;
+    }
+
+    input {
+        background: #f2f3f5;
+        border-color: #f2f3f5;
+        padding: 13px 70px 13px 14px;
+        width: 240px;
+        margin: 0;
+        outline: 0;
+        transition: .2s;
+
+        @include media-up(l) {
+            width: 258px;
+            padding: 11px 70px 11px 14px;
+        }
+
+        &:focus {
+            background: #e3e4e6;
+            border-color: #e3e4e6;
+
+            & + button {
+
+                span {
+                    background: #e3e4e6;
+                }
+            }
+        }
+    }
+
+    button {
+        position: absolute;
+        right: 0; top: 0;
+        padding: 0;
+        border: 0;
+        background: $blue;
+        width: 64px; height: 44px;
+        overflow: hidden;
+        transition: .2s;
+
+        span {
+            display: block;
+            position: absolute;
+            background: #f2f3f5;
+            width: 63px; height: 63px;
+            top: 16px; left: -23px;
+            transform: rotate(66deg);
+            transform-origin: top;
+            pointer-events: none;
+            transition: .2s;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 4832dfa7-3f48-4582-888b-f8351737ec61 # Structure - Dira Articles
+handle: articleTags
+instructions: 'Add article tags.'
+name: 'Article Tags'
+searchable: false
+settings:
+  allowLimit: false
+  allowMultipleSources: false
+  allowSelfRelations: false
+  limit: null
+  localizeRelations: false
+  selectionLabel: ''
+  showSiteMenu: false
+  source: 'taggroup:629fb362-054b-4357-8f97-293195a9e8ad' # Articles Tags
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Tags

@@ -1,0 +1,45 @@
+{% import 'macro/focal_point_image' as focalMacro %}
+
+{% set heroMsg = entry.heroMessage | nl2br %}
+{% set heroSig = entry.heroSignature %}
+
+<section class="articles-list -customer">
+    <div class="_wr">
+        <div class="inner">
+            {% if entries | length %}
+                <div class="customers">
+                    <div class="customers-list">
+                        <div class="in-rest">
+                            {% for customer in entries %}
+                                {% include '_components/_customers/card' with {
+                                    customer: customer,
+                                    index: loop.index
+                                } %}
+                                {% if loop.index == 2 and heroMsg %}
+                                    <div class="hero-msg">
+                                        <div class="mini-logo"></div>
+                                        <h3>{{ heroMsg | raw }}</h3>
+                                        {% if heroSig %}
+                                            <span>{{ heroSig }}</span>
+                                        {% endif %}
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                        {% if entries | length > 4 %}
+                            <div class="load-more js-load-more">
+                                <a href="javascript:;" class="btn arrow">
+                                    Se flere kunder
+                                </a>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            {% else %}
+                <div class="no-result center" style="margin-top: 2em;">
+                    <h2>Det er ingen informasjon om kunder for øyeblikket.</h2>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</section>

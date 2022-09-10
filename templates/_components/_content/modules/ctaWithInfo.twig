@@ -1,0 +1,37 @@
+{% import 'macro/focal_point_image' as focalMacro %}
+
+{% set imageInWhite  = module.imageInWhite.one() %}
+{% set textInWhite   = module.textInWhite | nl2br %}
+{% set textSignature = module.textSignature %}
+{% set entryLink     = module.entryLink.one() %}
+{% set customUrl     = module.customUrl %}
+{% set customLabel   = module.customLabel %}
+{% set moduleId      = module.moduleId %}
+
+<section class="module module-cta-with-info">
+    <div class="_wr">
+        <div class="in">
+            <div class="cta-card">
+                <div class="inner">
+                    <div class="img" style="{{ focalMacro.pointImage(imageInWhite) }}"></div>
+                    <div class="right">
+                        <div class="mini-logo white"></div>
+                        <h3>{{ textInWhite | raw }}</h3>
+                        {% if textSignature %}
+                            <div class="signature">
+                                {{ textSignature }}
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% if entryLink or customUrl %}
+                <div class="cta-link center">
+                    <a href="{{ entryLink ? entryLink.url : customUrl }}" class="btn grey" target="{{ customUrl and not entryLink ? '_blank' }}">
+                        {{ customLabel ?: entryLink ? entryLink.title : 'Les mer' }}
+                    </a>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</section>

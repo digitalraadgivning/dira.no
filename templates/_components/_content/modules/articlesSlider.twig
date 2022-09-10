@@ -1,0 +1,48 @@
+{% import 'macro/focal_point_image' as focalMacro %}
+
+{% set moduleId = module.moduleId %}
+{% set articles = craft.entries.section('articles').orderBy('postDate').limit(-1).all() %}
+
+{% if articles | length %}
+    <section class="module articles-slider">
+        <div class="related-entries">
+            <div class="_wr">
+                <div class="entries">
+                    <div class="swiper js-related-swiper">
+                        <div class="swiper-wrapper">
+                            {% for rEntry in articles %}
+                                {% set rTitle      = rEntry.title %}
+                                {% set rUrl        = rEntry.url %}
+                                {% set rExc        = rEntry.articleExcerpt | nl2br %}
+                                {% set rImg        = rEntry.articleImage.one() %}
+                                {% set placeholder = siteUrl('assets/build/src/img/article-placeholder.jpg') %}
+
+                                <div class="swiper-slide type-articles">
+                                    <a href="{{ rUrl }}" class="in">
+                                        <div class="img" style="{{ rImg ? focalMacro.pointImage(rImg) : 'background-image: url(' ~ placeholder ~ ')' }}"></div>
+                                        <div class="r-content">
+                                            <h3>{{ rTitle }}</h3>
+                                            {% if rExc %}
+                                                <div class="excerpt">
+                                                    {{ rExc | raw }}
+                                                </div>
+                                            {% endif %}
+                                            <div class="les-mer">
+                                                <span>Les mer</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <div class="cta">
+                    <a href="{{ siteUrl('artikler') }}" class="btn grey">
+                        Artikler
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endif %}

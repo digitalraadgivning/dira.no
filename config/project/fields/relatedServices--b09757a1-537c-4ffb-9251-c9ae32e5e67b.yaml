@@ -1,0 +1,22 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 6d567a3f-1db6-4a04-b03e-5651bd563854 # Structure - Dira Customers
+handle: relatedServices
+instructions: 'Choose related service/s.'
+name: 'Related Services'
+searchable: false
+settings:
+  allowSelfRelations: false
+  limit: ''
+  localizeRelations: false
+  selectionLabel: 'Choose Related Services'
+  showSiteMenu: false
+  source: null
+  sources:
+    - 'section:080d7fef-a5d8-4d50-9714-9219b1c5538a' # Dira Services
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

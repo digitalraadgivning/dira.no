@@ -1,0 +1,55 @@
+{% set bodyClass = 'søk' %}
+{% extends "_layouts/base" %}
+
+{% set searchQuery = craft.app.request.getParam('q') %}
+{% set entries = craft.entries()
+    .search(searchQuery)
+    .orderBy('score')
+    .all() %}
+
+{% block main %}
+
+    <div class="page-wrapper">
+        <section class="normal-header" style="margin-bottom: 45px;">
+            <div class="_wr">
+                <div class="inner center">
+                    <h1 class="brand-header grey">
+                        <span>Søkeresultater</span>
+                    </h1>
+                </div>
+            </div>
+        </section>
+
+        {% if entries|length %}
+            <section class="search-results" style="max-width: 600px; margin: 0 auto;">
+                <div class="_wr">
+                    <h4>{{ entries | length }} results:</h4>
+
+                    <ul style="margin-top: 30px;">
+                        {% for entry in entries %}
+                            <li style="margin-top: 10px;">
+                                <a class="s-results" href="{{ entry.url }}">
+                                    <strong>{{ entry.title }}</strong>
+                                </a>
+                            </li>
+                        {% endfor %}
+
+                        <style>
+
+                            .s-results:hover {
+                                color: #0070ff;
+                            }
+                        </style>
+                    </ul>
+                </div>
+            </section>
+        {% else %}
+            <section class="no-search-results" style="max-width: 600px; margin: 0 auto;">
+                <div class="_wr">
+                    <h5>Søket ditt etter "{{searchQuery}}" ga ingen resultater.</h5>
+                </div>
+            </section>
+        {% endif %}
+    </div>
+
+{% endblock %}

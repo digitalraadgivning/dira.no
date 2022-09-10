@@ -1,0 +1,204 @@
+field: 190bc3ff-c0d0-4640-a319-fc661baa93ff # List Boxes
+fieldLayouts:
+  83065d53-27cc-4890-b7e9-1afdb2ed92f6:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 797ee278-f08f-4929-bf15-e663d99f8bda # Box Title
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 045fc73f-b1cc-4e93-82c3-7ee4915d09f0 # Underline Title?
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 49c1bd10-e7b1-4524-a499-ccdbd7e9744c # Remove Grey Line Under Title?
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: b1646cdb-2688-4c38-ba18-70926d42fac7 # Box Info
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 89963b22-6f13-4ff3-98ca-a9b4938e95f3 # Button Entry URL (Optional)
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: ab7f2bee-57b1-4895-a2c2-67fa686a3bdc # Button URL (Optional)
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 46810640-b49a-4c9d-a2f6-753d2b789a89 # Button Label (Optional)
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  045fc73f-b1cc-4e93-82c3-7ee4915d09f0: # Underline Title?
+    columnSuffix: null
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: underlineTitle
+    instructions: ''
+    name: 'Underline Title?'
+    searchable: false
+    settings:
+      default: false
+      offLabel: null
+      onLabel: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
+  49c1bd10-e7b1-4524-a499-ccdbd7e9744c: # Remove Grey Line Under Title?
+    columnSuffix: null
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: removeGrey
+    instructions: ''
+    name: 'Remove Grey Line Under Title?'
+    searchable: false
+    settings:
+      default: false
+      offLabel: null
+      onLabel: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
+  797ee278-f08f-4929-bf15-e663d99f8bda: # Box Title
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: boxTitle
+    instructions: ''
+    name: 'Box Title'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  89963b22-6f13-4ff3-98ca-a9b4938e95f3: # Button Entry URL (Optional)
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: buttonEntryUrlOptional
+    instructions: 'Select Entry if you want button to link it to it, or add Button URL.'
+    name: 'Button Entry URL (Optional)'
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      limit: '1'
+      localizeRelations: false
+      selectionLabel: ''
+      showSiteMenu: true
+      source: null
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+  46810640-b49a-4c9d-a2f6-753d2b789a89: # Button Label (Optional)
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: buttonLabelOptional
+    instructions: 'Default is: Les mer'
+    name: 'Button Label (Optional)'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  ab7f2bee-57b1-4895-a2c2-67fa686a3bdc: # Button URL (Optional)
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: buttonUrlOptional
+    instructions: "Enter Button URL if you want button to link it to it, or select Button Entry.\r\nButton Entry will have bigger priority."
+    name: 'Button URL (Optional)'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  b1646cdb-2688-4c38-ba18-70926d42fac7: # Box Info
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: boxInfo
+    instructions: ''
+    name: 'Box Info'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '2'
+      multiline: '1'
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText

@@ -1,0 +1,17 @@
+{% set bodyClass = 'services-page' %}
+{% extends "_layouts/base" %}
+
+{% set entries = craft.entries()
+    .section('services')
+    .all() %}
+
+{% block main %}
+
+    <div class="page-wrapper">
+        {% include '_components/_headers/normal-page-header' %}
+        {% include '_components/_services/list' with {
+            entries: entries
+        } %}
+    </div>
+
+{% endblock %}

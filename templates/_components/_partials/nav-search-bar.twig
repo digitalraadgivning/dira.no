@@ -1,0 +1,8 @@
+<div class="search-bar">
+    <form action="{{ url('søk') }}">
+        <input type="search" name="q" aria-label="Søk…" placeholder="Søk…" autocomplete="off" value="{{ craft.app.request.getParam('q') }}" />
+        <button type="submit">
+            <span></span>
+        </button>
+    </form>
+</div>

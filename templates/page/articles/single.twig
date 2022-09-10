@@ -1,0 +1,25 @@
+{% set bodyClass = 'article-single' %}
+{% extends "_layouts/base" %}
+
+{% set featuredImage = entry.articleImage.one() %}
+{% set content       = entry.csContent %}
+{% set id            = entry.id %}
+{% set handle        = entry.section.handle %}
+
+{% block main %}
+
+    <div class="page-wrapper">
+        {% include '_components/_headers/image-header' with {
+            image: featuredImage
+        } %}
+        {% include '_components/_redactor/content' with {
+            content: content
+        } %}
+        {% include '_components/_partials/related-entries' with {
+            currentId: id,
+            handle: handle,
+            smallTitle: 'Relaterte artikler'
+        } %}
+    </div>
+
+{% endblock %}

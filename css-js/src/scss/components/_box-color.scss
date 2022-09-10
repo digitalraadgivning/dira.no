@@ -1,0 +1,29 @@
+.box-color {
+    position: relative;
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    border: 7px solid;
+
+    &.green {
+        background: #98ff58;
+        border-color: #6cc733;
+        box-shadow: 0 1px 20px #98ff58;
+    }
+
+    &.red {
+        background: #f6a18f;
+        border-color: #f14417;
+        box-shadow: 0 1px 20px #f6a18f;
+    }
+
+    &.yellow {
+        background: #fffb80;
+        border-color: #face04;
+        box-shadow: 0 1px 20px #fffb80;
+    }
+
+    &.mini {
+        border-width: 3px;
+        height: 11px; width: 11px;
+    }
+}

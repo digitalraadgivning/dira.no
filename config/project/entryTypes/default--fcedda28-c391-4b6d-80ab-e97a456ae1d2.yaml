@@ -1,0 +1,65 @@
+fieldLayouts:
+  7382e7b7-6d53-44d8-b051-1f92dca56647:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: ''
+            label: Name
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\EntryTitleField
+            warning: null
+            width: 100
+          -
+            fieldUid: a35b9601-4206-419f-a5fa-2bd0c1a50f0e # Featured Image
+            instructions: ''
+            label: ''
+            required: '1'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 13528aa3-0b8b-4976-bb7d-69f81e7a6402 # Person Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: 8d7659e1-81e9-4004-be63-a902999fb884 # Person Phone
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+        name: 'Person Data'
+        sortOrder: 1
+handle: default
+hasTitleField: true
+name: Default
+section: ef3a50e2-faa0-4f00-9155-07b7768b0cba # Dira Employees
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

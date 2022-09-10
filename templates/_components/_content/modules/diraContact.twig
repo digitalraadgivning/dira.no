@@ -1,0 +1,15 @@
+{% set customMsg = module.customMsg %}
+{% set entryLink = module.entryLink.one() %}
+{% set customUrl = module.customUrl %}
+{% set linkLabel = module.linkLabel %}
+{% set moduleId  = module.moduleId %}
+
+<section class="module module-dira-contact">
+    {% include '_components/_partials/global-contact-block' with {
+        customMsg: customMsg,
+        entryLink: entryLink,
+        customUrl: customUrl,
+        linkLabel: linkLabel
+    } %}
+</section>
+

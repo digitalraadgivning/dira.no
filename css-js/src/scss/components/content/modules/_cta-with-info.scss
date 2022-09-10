@@ -1,0 +1,92 @@
+.module-cta-with-info {
+    margin: 60px 0;
+
+    @include media-up(m) {
+        margin: 150px 0 80px;
+    }
+
+    .in {
+        max-width: 450px;
+        margin: 0 auto;
+
+        @include media-up(m) {
+            max-width: 877px;
+        }
+
+        @include media-up(4k) {
+            max-width: 100%;
+        }
+    }
+
+    .cta-card {
+
+        .inner {
+            display: flex;
+            width: 100%;
+            background: $white;
+            min-height: 150px;
+
+            @include media-up(m) {
+                min-height: 380px;
+            }
+        }
+
+        .img {
+            flex-shrink: 0;
+            width: 36%;
+            background: 50% / cover no-repeat;
+            clip-path: polygon(0 0, 79% 0, 100% 100%, 0 100%);
+        }
+
+        .right {
+            position: relative;
+            padding: 38px 25px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            width: 100%;
+
+            .mini-logo {
+                display: none;
+            }
+
+            @include media-up(m) {
+                text-align: center;
+
+                .mini-logo {
+                    display: block;
+                }
+            }
+
+            h3 {
+                font-size: 16px;
+
+                @include media-up(m) {
+                    font-size: 32px;
+                }
+            }
+
+            .signature {
+                margin-top: 5px;
+
+                @include media-up(m) {
+                    font-size: 18px;
+                    margin-top: 12px;
+                }
+            }
+        }
+    }
+
+    .cta-link {
+        margin-top: 17px;
+
+        @include media-up(m) {
+            margin-top: 34px;
+        }
+
+        .btn {
+            width: auto;
+            min-width: 199px;
+        }
+    }
+}

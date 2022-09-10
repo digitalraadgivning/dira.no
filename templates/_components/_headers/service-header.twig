@@ -1,0 +1,19 @@
+{% import 'macro/focal_point_image' as focalMacro %}
+
+{% set title = entry.title %}
+{% set serviceIcon  = entry.serviceIcon.one() %}
+
+<section class="normal-header -service{{ image ? ' with-image' }}">
+    {% if image %}
+        <div class="header-img" style="{{ focalMacro.pointImage(image) }}"></div>
+    {% else %}
+        <div class="normal-wrapper _wr">
+            <div class="inner center">
+                <h1 class="brand-header grey">
+                    <img src="{{ serviceIcon ? serviceIcon.url : siteUrl('assets/build/src/img/logo-placeholder.png') }}" alt="{{ siteName }}">
+                    <span>{{ title }}</span>
+                </h1>
+            </div>
+        </div>
+    {% endif %}
+</section>

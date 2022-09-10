@@ -1,0 +1,39 @@
+.global-contact-block {
+    text-align: center;
+
+    .phone {
+        margin-top: 1.5em;
+
+        @include media-up(l) {
+            font-size: 18px;
+        }
+    }
+
+    .email {
+        margin-top: 10px;
+
+        @include media-up(l) {
+            font-size: 18px;
+        }
+    }
+
+    .cta-btn {
+        margin-top: 30px;
+
+        .btn {
+            display: inline-block;
+            width: auto;
+
+            &:hover {
+                color: $white;
+            }
+        }
+    }
+
+    a {
+
+        &:hover {
+            color: $blue;
+        }
+    }
+}

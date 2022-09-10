@@ -1,0 +1,159 @@
+field: 48b393c6-8937-4f82-9402-a1d6bd982171 # Page Content
+fieldLayouts:
+  2480e239-5d9f-4725-a5cf-d9e709146fc6:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 0327dc7a-7a0b-4462-bc2e-0331574e473d # Custom Contact Message
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 21be74b4-7c09-4912-9e0e-ab59ce248942 # Entry Link
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: b8f17bc2-6cfd-4ef6-94b2-1323df4f9f6a # Custom URL
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: 2f84be3b-5a34-4262-9e3e-db7eb7724b31 # Custom Link Label
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: bfce2596-da0c-4130-b8b5-30418ec20af6 # Module ID
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  2f84be3b-5a34-4262-9e3e-db7eb7724b31: # Custom Link Label
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: linkLabel
+    instructions: "Add custom link label.\r\nBy default, its Entry name or Les mer."
+    name: 'Custom Link Label'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  21be74b4-7c09-4912-9e0e-ab59ce248942: # Entry Link
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: entryLink
+    instructions: 'Select entry to link to.'
+    name: 'Entry Link'
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      limit: ''
+      localizeRelations: false
+      selectionLabel: ''
+      showSiteMenu: true
+      source: null
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+  0327dc7a-7a0b-4462-bc2e-0331574e473d: # Custom Contact Message
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: customMsg
+    instructions: 'Enter custom message, instead one in Globals.'
+    name: 'Custom Contact Message'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  b8f17bc2-6cfd-4ef6-94b2-1323df4f9f6a: # Custom URL
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: customUrl
+    instructions: "Add custom URL to link to.\r\nEntry Link has bigger priority."
+    name: 'Custom URL'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  bfce2596-da0c-4130-b8b5-30418ec20af6: # Module ID
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: moduleId
+    instructions: ''
+    name: 'Module ID'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: diraContact
+name: 'Dira Contact'
+sortOrder: 5

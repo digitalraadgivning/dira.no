@@ -1,0 +1,48 @@
+.articles-list {
+
+    &.-customer {
+
+        .hero-msg {
+            text-align: center;
+            margin: 30px auto;
+            max-width: 640px;
+
+            @include media-up(m) {
+                margin: 80px auto;
+            }
+
+            @include media-up(l) {
+                margin: 130px auto;
+            }
+
+            h3 {
+                font-size: 16px;
+                font-weight: 800;
+
+                @include media-up(m) {
+                    font-size: 26px;
+                }
+
+                @include media-up(l) {
+                    font-size: 35px;
+                }
+            }
+
+            span {
+                display: block;
+                margin-top: 2px;
+                font-size: 14px;
+
+                @include media-up(m) {
+                    font-size: 16px;
+                    margin-top: 10px;
+                }
+
+                @include media-up(l) {
+                    font-size: 18px;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}

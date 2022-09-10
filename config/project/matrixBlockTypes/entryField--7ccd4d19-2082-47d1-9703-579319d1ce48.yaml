@@ -1,0 +1,96 @@
+field: 2202461d-285c-4b02-9aa1-66fea5228786 # Site Custom Navigation
+fieldLayouts:
+  b4ba9cdc-c76f-4947-96bd-d1d849d10e7b:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 8ca9ce47-bfd4-4d95-bdae-4074e4ad3960 # Entry Link
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: 8a4b5b11-31d8-46ca-a1aa-87aa567794f3 # Entry Name
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: a77b8649-4933-4619-982a-ed27582197e6 # Bold?
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  8a4b5b11-31d8-46ca-a1aa-87aa567794f3: # Entry Name
+    columnSuffix: etdasnjo
+    contentColumnType: text
+    fieldGroup: null
+    handle: entryName
+    instructions: 'Enter custom entry name.'
+    name: 'Entry Name'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  8ca9ce47-bfd4-4d95-bdae-4074e4ad3960: # Entry Link
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: entryLink
+    instructions: ''
+    name: 'Entry Link'
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      limit: '1'
+      localizeRelations: false
+      selectionLabel: ''
+      showSiteMenu: true
+      source: null
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+  a77b8649-4933-4619-982a-ed27582197e6: # Bold?
+    columnSuffix: null
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: bold
+    instructions: 'Should text be bold?'
+    name: 'Bold?'
+    searchable: false
+    settings:
+      default: false
+      offLabel: null
+      onLabel: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
+handle: entryField
+name: 'Entry Field'
+sortOrder: 1

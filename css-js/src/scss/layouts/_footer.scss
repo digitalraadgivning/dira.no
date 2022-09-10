@@ -1,0 +1,119 @@
+.site-footer {
+    overflow: hidden;
+    margin-top: 70px;
+
+    @include media-up(l) {
+        margin-top: 127px;
+    }
+
+    ._wr {
+
+        @include media-down(m) {
+            padding: 0 30px;
+        }
+    }
+
+    .inner {
+        display: flex;
+        width: 100%;
+    }
+
+    .footer-logo {
+        position: relative;
+        padding: 26px 0;
+        flex-shrink: 0;
+        z-index: 5;
+
+        img {
+            height: 75px;
+        }
+    }
+
+    .content {
+        position: relative;
+        display: flex;
+        width: 100%;
+        padding: 23px 0 23px 50px;
+        background: $white;
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 150px; height: 600px;
+            left: 0; top: 0;
+            pointer-events: none;
+            background: $grey;
+            transform: rotate(-19deg) translate(-73px, -50px);
+            z-index: 1;
+        }
+
+        &::after {
+            position: absolute;
+            content: '';
+            right: -45px; top: 0;
+            background: $white;
+            height: 600px; width: calc(100% + 80px);
+        }
+
+        @include media-up(xs) {
+            padding-left: 80px;
+        }
+
+        .footer-text {
+            position: relative;
+            z-index: 2;
+
+            p {
+                font-size: 14px;
+
+                &:not(:last-child) {
+                    margin: 0 0 1em;
+                }
+
+                @include media-up(l) {
+                    font-size: 20px;
+                }
+
+                @include media-up(4k) {
+                    font-size: 32px;
+                }
+            }
+
+            strong {
+                font-weight: 800;
+            }
+        }
+    }
+
+    .menu {
+        position: relative;
+        display: none;
+        padding: 0 0 0 50px;
+        z-index: 2;
+
+        @include media-up(s) {
+            display: block;
+        }
+
+        @include media-up(m) {
+            padding: 0 0 0 90px;
+        }
+
+        a {
+            font-size: 14px;
+
+            @include media-up(l) {
+                font-size: 20px;
+            }
+
+            @include media-up(4k) {
+                font-size: 32px;
+            }
+
+            &.bold {
+                font-weight: 800;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,27 @@
+defaultPlacement: end
+enableVersioning: true
+handle: employees
+name: 'Dira Employees'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  27aff492-2400-42d9-878a-bd134e93ebd6: # $DEFAULT_SITE_NAME
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: 1
+  uid: 64a17d59-4385-4c14-8f1e-8b95a4c0eabe
+type: structure

@@ -1,0 +1,199 @@
+html {
+    font-size: 100%;
+}
+
+html,
+body {
+    -webkit-text-size-adjust: 100%;
+    font-variant-ligatures: none;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    text-shadow: rgba($black, 0.01) 0 0 1px;
+    font-size: 14px;
+    font-family: $default-font;
+    line-height: 1.6;
+    font-weight: 400;
+    color: $black;
+
+    @include media-up(l) {
+        font-size: 20px;
+    }
+
+    @include media-up(4k) {
+        font-size: 36px;
+    }
+}
+
+h1,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    margin: 0;
+}
+
+h1 {
+	font-size: 38px;
+    line-height: 1.175;
+    font-weight: 500;
+
+    @include media-up(xl) {
+        font-size: 64px;
+    }
+
+    @include media-up(4k) {
+        font-size: 80px;
+    }
+}
+
+h2 {
+	font-size: 20px;
+    font-weight: 800;
+	line-height: normal;
+
+    @include media-up(m) {
+        font-size: 24px;
+    }
+
+    @include media-up(xl) {
+        font-size: 60px;
+    }
+
+    @include media-up(4k) {
+        font-size: 64px;
+    }
+}
+
+h3 {
+    font-size: 20px;
+    line-height: normal;
+    font-weight: 800;
+
+    @include media-up(m) {
+        font-size: 22px;
+    }
+
+    @include media-up(xl) {
+        font-size: 30px;
+    }
+
+    @include media-up(4k) {
+        font-size: 54px;
+    }
+}
+
+h4 {
+	font-size: 18px;
+    font-weight: 800;
+
+    @include media-up(m) {
+        font-size: 20px;
+    }
+
+    @include media-up(xl) {
+        font-size: 26px;
+    }
+
+    @include media-up(4k) {
+        font-size: 48px;
+    }
+}
+
+h5,
+h6 {
+    font-size: 16px;
+    font-weight: 800;
+
+    @include media-up(m) {
+       font-size: 18px;
+    }
+
+    @include media-up(xl) {
+        font-size: 22px;
+    }
+
+    @include media-up(4k) {
+        font-size: 42px;
+    }
+}
+
+h6 {
+    font-weight: 400;
+}
+
+p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+hr {
+    border: 1px solid darken($white, 30);
+}
+
+.brand-header {
+    font-size: 37px;
+    line-height: 1;
+    font-weight: 800;
+
+    span,
+    a {
+        &::before {
+            display: inline-block;
+            content: '';
+            width: 19px; height: 28px;
+            background: url(../../src/img/line-svg.svg) 0 0 / 100% auto no-repeat;
+            margin: 0 5px 0 0;
+        }
+    }
+
+    &.grey {
+
+        span,
+        a {
+
+            &::before {
+                background-image: url(../../src/img/line-svg-grey.svg);
+            }
+        }
+    }
+
+    @include media-up(m) {
+        font-size: 46px;
+
+        span,
+        a {
+
+            &::before {
+                width: 23px; height: 33px;
+            }
+        }
+    }
+
+    @include media-up(xl) {
+        font-size: 80px;
+        line-height: 85px;
+
+        span,
+        a {
+
+            &::before {
+                width: 40px; height: 56px;
+            }
+        }
+    }
+
+    @include media-laptop {
+        font-size: 46px;
+        line-height: 1;
+
+        span,
+        a {
+
+            &::before {
+                width: 23px; height: 33px;
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+{% set contactMsg   = siteContactData.contactTitle %}
+{% set contactPhone = siteContactData.contactPhone %}
+{% set contactEmail = siteContactData.contactEmail %}
+
+<div class="global-contact-block">
+    <div class="msg">
+        <h5>{{ customMsg is defined and customMsg ? customMsg : contactMsg }}</h5>
+    </div>
+    {% if contactPhone %}
+        <div class="phone">
+            <a href="tel:{{ contactPhone }}" target="_blank">{{ contactPhone }}</a>
+        </div>
+    {% endif %}
+    {% if contactEmail %}
+        <div class="email">
+            <a href="mailto:{{ contactEmail }}">{{ contactEmail }}</a>
+        </div>
+    {% endif %}
+    {% if (entryLink is defined and entryLink) or (customUrl is defined and customUrl) %}
+        {% set btnUrl = entryLink is defined and entryLink ? entryLink.url : customUrl %}
+        {% set target = (customUrl is defined and customUrl) and not entryLink %}
+
+        <div class="cta-btn">
+            <a href="{{ btnUrl }}" class="btn grey" target="{{ target ? '_blank' }}">
+                {{ entryLink is defined and entryLink ? entryLink.title : 'Les mer' }}
+            </a>
+        </div>
+    {% endif %}
+</div>

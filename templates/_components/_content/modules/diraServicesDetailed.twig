@@ -1,0 +1,57 @@
+{% set ourServicesText = module.ourServicesText | nl2br %}
+{% set moduleId        = module.moduleId %}
+
+{% set entries = craft.entries()
+    .section('services')
+    .all() %}
+
+<section class="module module-ds-detailed">
+    <div class="_wr">
+        <div class="in">
+            <div class="above-info">
+                <div class="ds-title">
+                    <h2>Våre tjenester</h2>
+                </div>
+                {% if ourServicesText %}
+                    <div class="ds-text">
+                        {{ ourServicesText | raw }}
+                    </div>
+                {% endif %}
+            </div>
+            {% if entries | length %}
+                <div class="listing">
+                    {% for e in entries %}
+                        {% set serviceIcon = e.serviceIcon.one() %}
+                        {% set placeholder = siteUrl('assets/build/src/img/logo-placeholder.png') %}
+                        {% set eTitle      = e.title %}
+                        {% set eUrl        = e.url %}
+                        {% set excerpt     = e.articleExcerpt | nl2br %}
+
+                        <div class="list-card">
+                            <div class="inner">
+                                <div class="left">
+                                    <img src="{{ serviceIcon ? serviceIcon.url : placeholder }}" alt="{{ eTitle }}">
+                                </div>
+                                <div class="right">
+                                    <div class="top">
+                                        <img src="{{ serviceIcon ? serviceIcon.url : placeholder }}" alt="{{ eTitle }}">
+                                        <h3>{{ eTitle }}</h3>
+                                    </div>
+                                    <div class="bot">
+                                        {{ excerpt | raw }}
+                                        <a href="{{ eUrl }}">Les mer</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="cta center">
+                    <a href="{{ siteUrl('tjenester') }}" class="btn grey">
+                        Våre tjenester
+                    </a>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</section>

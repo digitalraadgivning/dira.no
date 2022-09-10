@@ -1,0 +1,37 @@
+{% set navItems = siteNav.siteMenuNav.all() %}
+
+{% if navItems | length %}
+    <nav class="site-nav">
+        <div class="box-wrapper">
+            <div class="white-box box"></div>
+            <div class="blue-box box"></div>
+        </div>
+        <div class="inner">
+            <div class="close-button js-menu-toggle">
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="js-main-menu menu">
+                {% for menuItem in navItems %}
+                    {% if menuItem.type == 'entryField' %}
+                        {% set current_entry = menuItem.entryLink.one() %}
+                        {% set bold          = menuItem.bold %}
+                        {% set entryName     = menuItem.entryName %}
+
+                        <li{% if current_entry.url is same as(entry.url) %} class="active"{% endif %}>
+                            <a href="{{ current_entry.url }}" class="{{ bold ? 'bold' }}">{{ entryName ?: current_entry.title }}</a>
+                        </li>
+                    {% endif %}
+                    {% if menuItem.type == 'typeLink' %}
+                        {% set openInNewTab = menuItem.openInNewTab %}
+                        {% set bold          = menuItem.bold %}
+
+                        <li>
+                            <a href="{{ menuItem.menuItemUrl ?: '' }}" target="{{ openInNewTab ? '_blank' }}" class="{{ bold ? 'bold' }}">{{ menuItem.menuItemText ?: '' }}</a>
+                        </li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+    </nav>
+{% endif %}

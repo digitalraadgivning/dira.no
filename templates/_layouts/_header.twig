@@ -1,0 +1,83 @@
+{% set siteLogo      = siteNav.siteLogo.one() %}
+{% set navLeftLink   = siteNav.navLeftLink %}
+{% set leftLinkName  = siteNav.leftLinkName %}
+
+{% set showStatusBar = driftsmeldingerData.showStatusBar %}
+{% set listBoxes     = driftsmeldingerData.gddBoxes.all() %}
+{% set readyStatus   = false %}
+
+{% if showStatusBar and listBoxes | length %}
+    {% set boxes       = {} %}
+
+    {% for box in listBoxes %}
+        {% set boxTitle      = box.boxTitle %}
+        {% set boxAlertColor = box.boxAlertColor %}
+        {% set showInStatus  = box.showInStatusBar %}
+
+        {% if showInStatus %}
+            {% set readyStatus = true %}
+            {% set boxes = boxes | merge([{'title': boxTitle, 'color': boxAlertColor.value}]) %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+
+<header id="header" class="site-header{{ readyStatus ? ' with-status-bar' }}">
+    <div class="_wr">
+        <div class="inner">
+            {% if navLeftLink %}
+                <div class="external-link">
+                    <a href="{{ navLeftLink }}" target="_blank">
+                        {{ leftLinkName ?: 'Les mer' }}
+                    </a>
+                </div>
+            {% endif %}
+            <div class="site-logo">
+                <a href="{{ siteUrl }}">
+                    {% if siteLogo %}
+                        <img src="{{ siteLogo.url }}" alt="{{ currentSite.name }}" />
+                    {% endif %}
+                </a>
+            </div>
+            {% include '_components/_partials/nav-search-bar' %}
+            <div class="menu-button js-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            {% include "_layouts/_nav" %}
+        </div>
+    </div>
+    {% if readyStatus %}
+        {% set driftsmeldingerPage = craft.entries.section('operationNotices').one() %}
+
+        <div class="status-bar">
+            <div class="status-bar-in">
+                <div class="swiper js-status-bar">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide main-slide">
+                            <div class="inner-mini-box">
+                                <a href="{{ driftsmeldingerPage.url }}" class="drift-page-link">
+                                    <span class="mob">Driftstatus</span>
+                                    <span class="des">Driftsmeldinger</span>
+                                </a>
+                            </div>
+                        </div>
+                        {% for miniBox in boxes %}
+                            {% set miniTitle = miniBox.title %}
+                            {% set miniColor = miniBox.color %}
+
+                            <div class="swiper-slide">
+                                <div class="inner-mini-box">
+                                    <div class="status">
+                                        <span>{{ miniTitle }}</span>
+                                        <div class="box-color mini {{ miniColor }}"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+</header>

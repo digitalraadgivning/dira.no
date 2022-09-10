@@ -1,0 +1,80 @@
+.redactor-content {
+    margin-top: 35px;
+
+    ul {
+        list-style: disc;
+        padding-left: 20px;
+        margin: 0 0 20px;
+    }
+
+    p {
+
+        &:not(:last-child) {
+            margin: 0 0 1em;
+        }
+    }
+
+    figure {
+        position: relative;
+        margin: 0 0 1em;
+
+        iframe {
+            max-width: 100%;
+        }
+    }
+
+    .in-redactor {
+        background: $white;
+        padding: 30px;
+
+        @include media-up(m) {
+            margin-top: 50px;
+        }
+
+        @include media-up(l) {
+            padding: 47px 60px;
+        }
+
+        @include media-up(xl) {
+            padding: 47px 90px 70px;
+        }
+    }
+
+    .redactor-title {
+        padding: 0 0 20px;
+        border-bottom: 3px solid $grey;
+        margin-bottom: 32px;
+
+        .brand-header {
+
+            @include media-up(xl) {
+                font-size: 60px;
+                line-height: normal;
+
+                a,
+                span {
+
+                    &::before {
+                        width: 32px; height: 44px;
+                    }
+                }
+            }
+        }
+    }
+
+    .published {
+        font-size: 16px;
+        opacity: .8;
+        margin: -20px 0 32px;
+
+        @include media-up(l) {
+            font-size: 20px;
+        }
+
+        &.-bot {
+            margin: 60px 0 0;
+            padding-top: 11px;
+            border-top: 3px solid $grey;
+        }
+    }
+}

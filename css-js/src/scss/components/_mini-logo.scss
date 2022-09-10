@@ -1,0 +1,28 @@
+.mini-logo {
+    margin: 0 0 5px;
+
+    &::before,
+    &::after {
+        display: inline-block;
+        content: '';
+        width: 13px; height: 22px;
+        background: url(../../src/img/line-svg-grey.svg) 0 0 / 100% auto no-repeat;
+    }
+
+    &.white {
+
+        &::before,
+        &::after {
+            background-image: url(../../src/img/line-svg.svg)
+        }
+    }
+
+    @include media-up(m) {
+        margin: 0 0 12px;
+
+        &::before,
+        &::after {
+            width: 19px; height: 28px;
+        }
+    }
+}

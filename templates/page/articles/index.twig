@@ -1,0 +1,17 @@
+{% set bodyClass = 'articles-page' %}
+{% extends "_layouts/base" %}
+
+{% set entries = craft.entries()
+    .section('articles')
+    .all() %}
+
+{% block main %}
+
+    <div class="page-wrapper">
+        {% include '_components/_headers/articles-header' %}
+        {% include '_components/_articles/list' with {
+            entries: entries
+        } %}
+    </div>
+
+{% endblock %}

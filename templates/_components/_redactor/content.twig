@@ -1,0 +1,39 @@
+{% set title  = entry.title %}
+{% set handle = entry.section.handle %}
+
+<section class="redactor-content">
+    <div class="inner">
+        <div class="_wr -redactor">
+            <div class="in-redactor">
+                <div class="redactor-title">
+                    <h1 class="brand-header">
+                        <span>{{ title }}</span>
+                    </h1>
+                </div>
+                {% if handle == 'articles' %}
+                    {% set publishDate   = entry.postDate | date('d.m.Y') %}
+                    {% set publishTime   = entry.postDate | date('G:i') %}
+                    {% set publishAuthor = entry.author %}
+
+                    <div class="published">
+                        Publisert {{ publishDate }} kl {{ publishTime}} av {{ publishAuthor }}
+                    </div>
+                {% endif %}
+                {% if content is defined and content %}
+                    <div class="c">
+                        {{ content }}
+                    </div>
+                    {% if handle == 'articles' %}
+                        {% set publishDate   = entry.postDate | date('d.m.Y') %}
+                        {% set publishTime   = entry.postDate | date('G:i') %}
+                        {% set publishAuthor = entry.author %}
+
+                        <div class="published -bot">
+                            Publisert {{ publishDate }} kl {{ publishTime}} av {{ publishAuthor }}
+                        </div>
+                    {% endif %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>

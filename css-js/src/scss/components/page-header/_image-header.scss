@@ -1,0 +1,12 @@
+.image-header {
+
+    div {
+        background: url(../../src/img/article-placeholder.jpg) 50% / cover no-repeat;
+        height: 0;
+        padding: 0 0 56.25%;
+
+        @include media-up(m) {
+            padding: 0 0 33.44%;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+columnSuffix: qpkihydg
+contentColumnType: boolean
+fieldGroup: 668d7ba4-39e2-4a10-80a8-51637517741b # Globals - Driftsmeldinger Data
+handle: showStatusBar
+instructions: 'Should status bar be shown for selected boxes?'
+name: 'Show Driftsmeldinger Status Bar?'
+searchable: false
+settings:
+  default: false
+  offLabel: null
+  onLabel: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

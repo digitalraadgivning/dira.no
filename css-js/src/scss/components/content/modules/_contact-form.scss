@@ -1,0 +1,71 @@
+.module-contact-form {
+    margin: 34px 0 77px;
+
+    @include media-up(m) {
+        margin-top: 60px;
+    }
+
+    .message {
+        text-align: center;
+        margin: 0 0 40px;
+
+        &.notice {
+            color: $status-green;
+        }
+
+        &.error {
+            color: $status_red;
+        }
+    }
+
+    form {
+        max-width: 260px;
+        margin: 0 auto;
+
+        @include media-up(s) {
+            max-width: 360px;
+        }
+
+        @include media-up(m) {
+            max-width: 100%;
+        }
+
+        .right {
+            margin-top: 20px;
+        }
+
+        .bot {
+            margin-top: 45px;
+            text-align: center;
+
+            .btn {
+                width: auto;
+                cursor: pointer;
+            }
+        }
+
+        .in {
+
+            @include media-up(m) {
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+
+                .left {
+                    width: 30%;
+                    padding-right: 12px;
+                }
+
+                .right {
+                    width: 70%;
+                    margin: 0;
+                    padding-left: 12px;
+                }
+
+                .bot {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

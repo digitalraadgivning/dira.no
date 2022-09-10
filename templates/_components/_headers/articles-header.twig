@@ -1,0 +1,42 @@
+{% import 'macro/focal_point_image' as focalMacro %}
+
+{% set title       = entry.title %}
+{% set articleTags = craft.tags()
+    .group('articlesTags').all() %}
+
+<section class="articles-header">
+    <div class="_wr">
+        <div class="inner center">
+            <h1 class="brand-header grey">
+                {% if activeTagId is defined and activeTagId %}
+                    <a href="{{ url('/artikler') }}">{{ title }}</a>
+                {% else %}
+                    <span>{{ title }}</span>
+                {% endif %}
+            </h1>
+            {% if articleTags | length %}
+                {% if activeTagId is defined and activeTagId %}
+
+                    {% set tag = craft.tags()
+                        .id(activeTagId)
+                        .one() %}
+
+                    <div class="active-tag">
+                        <span>{{ tag.title }}</span>
+                    </div>
+                {% endif %}
+                <div class="article-tags">
+                    <ul>
+                        {% for tag in articleTags %}
+                            {% set tag_id = tag.id %}
+
+                            <li class="tag{{ activeTagId is defined and activeTagId == tag_id ? ' active' }}">
+                                <a href="{{ url('artikler/tag/' ~ tag.id) }}">{{ tag.title }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</section>

@@ -1,0 +1,129 @@
+fieldLayouts:
+  7ea998b0-5121-4e14-832c-9caf3373764b:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\EntryTitleField
+            warning: null
+            width: 100
+          -
+            fieldUid: a856f8a8-6e0b-4f19-9da9-ee9ae49387dd # Article Excerpt
+            instructions: 'Short service description that will be shown on service cards.'
+            label: 'Service Excerpt'
+            required: ''
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            type: craft\fieldlayoutelements\HorizontalRule
+          -
+            fieldUid: dab2ed87-f018-40d2-b65d-dc2233d0a211 # Article Image
+            instructions: ''
+            label: 'Featured Image'
+            required: ''
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: a72a30e0-25d7-4a6f-8cd5-65d459fa9f38 # Service Icon
+            instructions: ''
+            label: ''
+            required: ''
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+        name: 'Servies Data'
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: 48b393c6-8937-4f82-9402-a1d6bd982171 # Page Content
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: 'Service Content'
+        sortOrder: 2
+      -
+        elements:
+          -
+            fieldUid: 70b04be1-ca61-4f64-8983-47f37be11675 # Page Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 30d7b80d-5ede-47a8-8b53-9a193547c750 # Page Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 7cec95cc-1712-4f28-b46f-812763ed6230 # Page URL
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: b395b4bc-4cdd-4edf-a06c-5c3ed9e758cb # Page Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: ba9a3316-329c-4df5-8ddd-9abc7ac9f7d7 # Page Image Alt
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: SEO
+        sortOrder: 3
+handle: default
+hasTitleField: true
+name: Default
+section: 080d7fef-a5d8-4d50-9714-9219b1c5538a # Dira Services
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

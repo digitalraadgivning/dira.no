@@ -1,0 +1,22 @@
+{% import 'macro/focal_point_image' as focalMacro %}
+
+{% set artTitle   = article.title %}
+{% set artUrl     = article.url %}
+{% set artImage   = article.articleImage.one() %}
+{% set artExcerpt = article.articleExcerpt | nl2br %}
+
+<div class="card js-card -article{{ index > 10 ? ' hidden' }}">
+    <a href="{{ artUrl }}">
+        <div class="content">
+            <div class="img" style="{{ focalMacro.pointImage(artImage) }}"></div>
+            <div class="content-part">
+                <div class="card-title">
+                    <h3>{{ artTitle }}</h3>
+                </div>
+                <div class="card-excerpt">
+                    {{ artExcerpt | raw }}
+                </div>
+            </div>
+        </div>
+    </a>
+</div>

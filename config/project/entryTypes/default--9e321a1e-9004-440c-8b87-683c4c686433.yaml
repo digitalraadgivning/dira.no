@@ -1,0 +1,131 @@
+fieldLayouts:
+  22e73166-1da7-4eae-bd1a-ac75da76d80e:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\EntryTitleField
+            warning: null
+            width: 100
+          -
+            fieldUid: a856f8a8-6e0b-4f19-9da9-ee9ae49387dd # Article Excerpt
+            instructions: ''
+            label: ''
+            required: '1'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            type: craft\fieldlayoutelements\HorizontalRule
+          -
+            fieldUid: dab2ed87-f018-40d2-b65d-dc2233d0a211 # Article Image
+            instructions: ''
+            label: 'Featured Image'
+            required: '1'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            type: craft\fieldlayoutelements\HorizontalRule
+          -
+            fieldUid: 3f0d5825-c194-4574-b2c7-d84ac9bc4eea # Article Tags
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: 'Article Data'
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: b428c6c7-61b0-430f-aaaf-76e0c36a018b # Page Content
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: 'Article Content'
+        sortOrder: 2
+      -
+        elements:
+          -
+            fieldUid: 70b04be1-ca61-4f64-8983-47f37be11675 # Page Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 30d7b80d-5ede-47a8-8b53-9a193547c750 # Page Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 7cec95cc-1712-4f28-b46f-812763ed6230 # Page URL
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: b395b4bc-4cdd-4edf-a06c-5c3ed9e758cb # Page Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: ba9a3316-329c-4df5-8ddd-9abc7ac9f7d7 # Page Image Alt
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: SEO
+        sortOrder: 3
+handle: default
+hasTitleField: true
+name: Default
+section: c4624692-18bc-44a0-aec6-8a93e1dab109 # Dira Articles
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

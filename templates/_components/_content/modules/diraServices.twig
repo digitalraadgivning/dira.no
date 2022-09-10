@@ -1,0 +1,8 @@
+{% set showDiraServices = module.showDiraServices %}
+{% set moduleId         = module.moduleId %}
+
+{% if showDiraServices %}
+    <section class="module module-dira-services">
+        {% include '_components/_partials/global-services-block' %}
+    </section>
+{% endif %}

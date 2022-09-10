@@ -1,0 +1,225 @@
+field: 48b393c6-8937-4f82-9402-a1d6bd982171 # Page Content
+fieldLayouts:
+  47b1e4e9-907c-49cf-a4cd-e4cbf7080830:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 7a43c953-3dd4-40d5-bbe8-498e7411a32c # Content
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 7cbe98d3-3c01-4ebb-bb74-04967902d7d8 # Hide Title?
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 53fe6a6d-e33e-4463-9f20-fa4e7f997d67 # Show Contact Info?
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: ce7dcd0d-e834-4ddf-9787-b8b533ef54db # Custom Contact Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: 8114666e-7dcb-4bf9-a840-a1de2e760e23 # Show Services Box?
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 50
+          -
+            fieldUid: 3a85c090-03fa-4b9c-ae60-4a6c49b7b318 # Sidebar FAQ
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 1305912f-e7bd-4297-b074-b9c45da795db # Module ID
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  3a85c090-03fa-4b9c-ae60-4a6c49b7b318: # Sidebar FAQ
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: sidebarFaq
+    instructions: 'Add sidebar FAQ'
+    name: 'Sidebar FAQ'
+    searchable: false
+    settings:
+      columns:
+        __assoc__:
+          -
+            - 09ceb341-b5a9-4e3b-ac59-7e75640530e9 # FAQ Question
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - 7db5c248-29af-45a7-8d4f-a746e0a2717f # FAQ Answer
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+      contentTable: '{{%stc_3_sidebarfaq}}'
+      fieldLayout: row
+      maxRows: ''
+      minRows: ''
+      placeholderKey: null
+      propagationMethod: all
+      selectionLabel: 'Add FAQ'
+      staticField: ''
+    translationKeyFormat: null
+    translationMethod: site
+    type: verbb\supertable\fields\SuperTableField
+  7a43c953-3dd4-40d5-bbe8-498e7411a32c: # Content
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: leftContent
+    instructions: ''
+    name: Content
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      cleanupHtml: true
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: Standard.json
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showHtmlButtonForNonAdmins: ''
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  7cbe98d3-3c01-4ebb-bb74-04967902d7d8: # Hide Title?
+    columnSuffix: null
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: hideTitle
+    instructions: ''
+    name: 'Hide Title?'
+    searchable: false
+    settings:
+      default: false
+      offLabel: null
+      onLabel: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
+  53fe6a6d-e33e-4463-9f20-fa4e7f997d67: # Show Contact Info?
+    columnSuffix: null
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: showContactInfo
+    instructions: ''
+    name: 'Show Contact Info?'
+    searchable: false
+    settings:
+      default: false
+      offLabel: null
+      onLabel: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
+  1305912f-e7bd-4297-b074-b9c45da795db: # Module ID
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: moduleId
+    instructions: ''
+    name: 'Module ID'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  8114666e-7dcb-4bf9-a840-a1de2e760e23: # Show Services Box?
+    columnSuffix: null
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: showRestOfServices
+    instructions: ''
+    name: 'Show Services Box?'
+    searchable: false
+    settings:
+      default: false
+      offLabel: null
+      onLabel: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
+  ce7dcd0d-e834-4ddf-9787-b8b533ef54db: # Custom Contact Title
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: customContactTitle
+    instructions: ''
+    name: 'Custom Contact Title'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: contentSidebar
+name: 'Intro Content & Sidebar'
+sortOrder: 1

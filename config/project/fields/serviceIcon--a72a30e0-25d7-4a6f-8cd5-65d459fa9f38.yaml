@@ -1,0 +1,33 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 3267c69d-f206-4973-abaf-226e3e3b79b9 # Structure - Dira Services
+handle: serviceIcon
+instructions: 'Add service icon (png or svg).'
+name: 'Service Icon'
+searchable: false
+settings:
+  allowSelfRelations: false
+  allowUploads: true
+  allowedKinds: null
+  defaultUploadLocationSource: 'volume:5258e7de-fdc7-487f-9a45-2e567a7b1251' # Images
+  defaultUploadLocationSubpath: ''
+  limit: '1'
+  localizeRelations: false
+  previewMode: full
+  restrictFiles: ''
+  selectionLabel: 'Add Service Icon'
+  showSiteMenu: false
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  singleUploadLocationSource: 'volume:8dec0694-79e6-43cf-9898-1f9633496ab5' # Videos
+  singleUploadLocationSubpath: ''
+  source: null
+  sources:
+    - 'volume:5258e7de-fdc7-487f-9a45-2e567a7b1251' # Images
+  targetSiteId: null
+  useSingleFolder: false
+  validateRelatedElements: false
+  viewMode: large
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Assets

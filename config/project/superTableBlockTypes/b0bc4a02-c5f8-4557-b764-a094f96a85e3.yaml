@@ -1,0 +1,194 @@
+field: 8c996efa-4ce4-4718-8b87-2cc4d9651b05 # Driftsmeldinger List Boxes
+fieldLayouts:
+  feba04da-23d2-4224-8f5a-cc7015b23486:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 2edfe7b7-d4f7-43af-9f36-348de5758a57 # Box Title
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 5efe7a00-4dc8-42ef-afd2-c9da2657544f # Underline Title?
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 16998436-1ecb-4524-980b-0d8f4541ffc1 # Remove Grey Line Under Title?
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 724f0bd4-fbd2-43f0-a05b-d49b1e6458e9 # Box Alert Color?
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: d7df0331-9b52-43af-9120-23a536377367 # Box Info
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: acba53bd-9a9a-449d-b985-1145bfbad713 # Show in Status Bar?
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  2edfe7b7-d4f7-43af-9f36-348de5758a57: # Box Title
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: boxTitle
+    instructions: ''
+    name: 'Box Title'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  5efe7a00-4dc8-42ef-afd2-c9da2657544f: # Underline Title?
+    columnSuffix: null
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: underlineTitle
+    instructions: ''
+    name: 'Underline Title?'
+    searchable: false
+    settings:
+      default: false
+      offLabel: null
+      onLabel: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
+  724f0bd4-fbd2-43f0-a05b-d49b1e6458e9: # Box Alert Color?
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: boxAlertColor
+    instructions: 'Choose color to show in box.'
+    name: 'Box Alert Color?'
+    searchable: false
+    settings:
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Green
+            -
+              - value
+              - green
+            -
+              - default
+              - '1'
+        -
+          __assoc__:
+            -
+              - label
+              - Yellow
+            -
+              - value
+              - yellow
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Red
+            -
+              - value
+              - red
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\RadioButtons
+  16998436-1ecb-4524-980b-0d8f4541ffc1: # Remove Grey Line Under Title?
+    columnSuffix: null
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: removeGrey
+    instructions: ''
+    name: 'Remove Grey Line Under Title?'
+    searchable: false
+    settings:
+      default: false
+      offLabel: null
+      onLabel: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
+  acba53bd-9a9a-449d-b985-1145bfbad713: # Show in Status Bar?
+    columnSuffix: vkgrsdtv
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: showInStatusBar
+    instructions: 'Select if you want this info to be shown in status bar.'
+    name: 'Show in Status Bar?'
+    searchable: false
+    settings:
+      default: false
+      offLabel: null
+      onLabel: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
+  d7df0331-9b52-43af-9120-23a536377367: # Box Info
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: boxInfo
+    instructions: ''
+    name: 'Box Info'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '2'
+      multiline: '1'
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText

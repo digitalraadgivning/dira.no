@@ -1,0 +1,56 @@
+.menu-button {
+    display: block;
+    cursor: pointer;
+
+    span {
+        display: block;
+        background: $black;
+        width: 15px; height: 3px;
+
+        &:nth-child(2) {
+            margin: 3px 0;
+        }
+
+        @include media-up(m) {
+            width: 22px; height: 4px;
+
+            &:nth-child(2) {
+                margin: 4px 0;
+            }
+        }
+    }
+}
+
+.close-button {
+    position: absolute;
+    right: 32px; top: 30px;
+    width: 20px; height: 20px;
+    transform: rotate(45deg);
+    cursor: pointer;
+
+    @include media-up(m) {
+        right: 68px; top: 40px;
+        width: 26px; height: 26px;
+    }
+
+    @include media-landscape {
+        top: 17px;
+    }
+
+    span {
+        position: absolute;
+        display: block;
+        background: $white;
+        transition: .2s;
+
+        &:first-child {
+            top: 0; bottom: 0; left: calc(50% - 2px);
+            width: 4px; height: 100%;
+        }
+
+        &:last-child {
+            left: 0; right: 0; top: calc(50% - 2px);
+            height: 4px; width: auto;
+        }
+    }
+}

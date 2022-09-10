@@ -1,0 +1,102 @@
+field: 48b393c6-8937-4f82-9402-a1d6bd982171 # Page Content
+fieldLayouts:
+  04467bc0-1ef3-42d5-a792-288c0cd55908:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 545cf97d-6435-49f6-aa1a-28fe63c5cdc4 # Module Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 8466f386-7144-4ad9-b82b-ac3c75cab244 # Initial Service
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: adf16dd3-4d01-4cab-9d30-c0b0653c0f9b # Module ID
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  545cf97d-6435-49f6-aa1a-28fe63c5cdc4: # Module Title
+    columnSuffix: azxdwyti
+    contentColumnType: text
+    fieldGroup: null
+    handle: moduleTitle
+    instructions: ''
+    name: 'Module Title'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  8466f386-7144-4ad9-b82b-ac3c75cab244: # Initial Service
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: initialService
+    instructions: "This will show initial customers slider connected to Initial Service.\r\nYou can filter others afterwards.\r\nNOTE: If you are using it on service page, leave empty and by default, this service will be selected."
+    name: 'Initial Service'
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      limit: '1'
+      localizeRelations: false
+      selectionLabel: ''
+      showSiteMenu: true
+      source: null
+      sources:
+        - 'section:080d7fef-a5d8-4d50-9714-9219b1c5538a' # Dira Services
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+  adf16dd3-4d01-4cab-9d30-c0b0653c0f9b: # Module ID
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: moduleId
+    instructions: ''
+    name: 'Module ID'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: customersSlider
+name: 'Customers Slider'
+sortOrder: 10

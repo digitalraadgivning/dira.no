@@ -1,0 +1,65 @@
+field: 48b393c6-8937-4f82-9402-a1d6bd982171 # Page Content
+fieldLayouts:
+  8d8ed269-c508-4aa7-b7bb-bfdc997f669f:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: e4ff2116-04d7-4d28-b69c-7bf330bd31fd # Show Dira Services?
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 4dbfd059-90cc-4aa5-bb4b-f61f026fa9c9 # Module ID
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  4dbfd059-90cc-4aa5-bb4b-f61f026fa9c9: # Module ID
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: moduleId
+    instructions: ''
+    name: 'Module ID'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  e4ff2116-04d7-4d28-b69c-7bf330bd31fd: # Show Dira Services?
+    columnSuffix: null
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: showDiraServices
+    instructions: ''
+    name: 'Show Dira Services?'
+    searchable: false
+    settings:
+      default: true
+      offLabel: null
+      onLabel: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
+handle: diraServices
+name: 'Dira Services'
+sortOrder: 3

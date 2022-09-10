@@ -1,0 +1,45 @@
+{% set boxesTitle  = driftsmeldingerData.gddTitle %}
+{% set listBoxes   = driftsmeldingerData.gddBoxes.all() %}
+{% set customTitle = module.customTitle %}
+{% set hideTitle   = module.hideTitle %}
+{% set moduleId    = module.moduleId %}
+
+{% set count       = listBoxes | length %}
+{% set classNumber = 2 %}
+
+{% if count %}
+    {% if count % 4 == 0 %}
+        {% set classNumber = 2 %}
+    {% elseif count % 3 == 0 %}
+        {% set classNumber = 3 %}
+    {% endif %}
+
+    <section class="module module-list-boxes">
+        {% if not hideTitle and (boxesTitle or customTitle) %}
+            <div class="boxes-title">
+                <h2>{{ customTitle ?: boxesTitle }}</h2>
+            </div>
+        {% endif %}
+        <div class="inner count-{{ classNumber }}{{ count > 3 ? ' with-mid-shadow' }}">
+            {% for box in listBoxes %}
+                {% set boxTitle               = box.boxTitle %}
+                {% set underlineTitle         = box.underlineTitle %}
+                {% set removeGrey             = box.removeGrey %}
+                {% set boxAlertColor          = box.boxAlertColor %}
+                {% set boxInfo                = box.boxInfo | nl2br %}
+
+                <div class="box with-color">
+                    <div class="in">
+                        <div class="box-color {{ boxAlertColor }}"></div>
+                        <div class="box-title{{ underlineTitle ? ' underline' }}{{ removeGrey ? ' remove-grey' }}">
+                            <h3>{{ boxTitle }}</h3>
+                        </div>
+                        <div class="box-info">
+                            {{ boxInfo }}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+{% endif %}

@@ -1,0 +1,150 @@
+field: 48b393c6-8937-4f82-9402-a1d6bd982171 # Page Content
+fieldLayouts:
+  6e470a03-c248-4858-891a-9e5998d9acbf:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 43a7be5b-3720-4198-bf36-5503e241ba04 # Boxes Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 190bc3ff-c0d0-4640-a319-fc661baa93ff # List Boxes
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: d40d4da7-62c5-4c97-bf28-d19a16cb7463 # Module ID
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  43a7be5b-3720-4198-bf36-5503e241ba04: # Boxes Title
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: boxesTitle
+    instructions: 'Add boxes title.'
+    name: 'Boxes Title'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  190bc3ff-c0d0-4640-a319-fc661baa93ff: # List Boxes
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: listBoxes
+    instructions: 'Add boxes in a list.'
+    name: 'List Boxes'
+    searchable: false
+    settings:
+      columns:
+        __assoc__:
+          -
+            - 797ee278-f08f-4929-bf15-e663d99f8bda # Box Title
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - 045fc73f-b1cc-4e93-82c3-7ee4915d09f0 # Underline Title?
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - 49c1bd10-e7b1-4524-a499-ccdbd7e9744c # Remove Grey Line Under Title?
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - b1646cdb-2688-4c38-ba18-70926d42fac7 # Box Info
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - 89963b22-6f13-4ff3-98ca-a9b4938e95f3 # Button Entry URL (Optional)
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - ab7f2bee-57b1-4895-a2c2-67fa686a3bdc # Button URL (Optional)
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - 46810640-b49a-4c9d-a2f6-753d2b789a89 # Button Label (Optional)
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+      contentTable: '{{%stc_4_listboxes}}'
+      fieldLayout: row
+      maxRows: '4'
+      minRows: ''
+      placeholderKey: null
+      propagationMethod: all
+      selectionLabel: 'Add Box'
+      staticField: ''
+    translationKeyFormat: null
+    translationMethod: site
+    type: verbb\supertable\fields\SuperTableField
+  d40d4da7-62c5-4c97-bf28-d19a16cb7463: # Module ID
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: moduleId
+    instructions: ''
+    name: 'Module ID'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: listBoxes
+name: 'List Boxes'
+sortOrder: 2

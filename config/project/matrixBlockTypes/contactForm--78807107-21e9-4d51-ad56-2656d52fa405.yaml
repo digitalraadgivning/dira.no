@@ -1,0 +1,70 @@
+field: 48b393c6-8937-4f82-9402-a1d6bd982171 # Page Content
+fieldLayouts:
+  b681d84c-0ab0-42ab-98f7-ef72c6f50cc8:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 260c39ff-27d8-4568-885f-ed49e60ce6f3 # Placeholder for Message
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 0108d81e-ba2f-4c2c-bacd-191ad45c7475 # Module ID
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  0108d81e-ba2f-4c2c-bacd-191ad45c7475: # Module ID
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: moduleId
+    instructions: ''
+    name: 'Module ID'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  260c39ff-27d8-4568-885f-ed49e60ce6f3: # Placeholder for Message
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: msgPlaceholder
+    instructions: "Add custom placeholder for message, or leave empty for default.\r\nNOTE: You can have only 1 contact form per page"
+    name: 'Placeholder for Message'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: contactForm
+name: 'Contact Form'
+sortOrder: 6
