@@ -53,3 +53,5 @@ phpmyadmin
 
 # Ignore desktop.ini
 desktop.ini
+
+web/assets/build
