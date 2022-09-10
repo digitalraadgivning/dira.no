@@ -15,7 +15,6 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }} # User of the server you want to ssh into
      
           script: |
-            sudo su -l www-data -s /bin/bash
             cd /var/www/html/dira.no
             git pull
             composer install --no-interaction
@@ -24,3 +23,4 @@ jobs:
             cd css-js
             yarn install
             yarn run prod
+            sudo chmod -R 755 /var/www/html/
