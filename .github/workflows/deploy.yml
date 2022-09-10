@@ -18,3 +18,9 @@ jobs:
             sudo su -l www-data -s /bin/bash
             cd /var/www/html/dira.no
             git pull
+            composer install --no-interaction
+            php craft up
+            php craft clear-caches/all
+            cd css-js
+            yarn install
+            yarn run prod
