@@ -11,7 +11,7 @@ body {
     -webkit-font-smoothing: antialiased;
     font-smoothing: antialiased;
     text-shadow: rgba($black, 0.01) 0 0 1px;
-    font-size: 14px;
+    font-size: 16px;
     font-family: $default-font;
     line-height: 1.6;
     font-weight: 400;
@@ -95,9 +95,7 @@ h4 {
 
 }
 
-h5 {
-    color:#2F53FF
-}
+
 
 h5,
 h6 {
@@ -124,7 +122,7 @@ p {
     margin: 0;
     line-height: 1.6;
 
- 
+
 }
 
 hr {
