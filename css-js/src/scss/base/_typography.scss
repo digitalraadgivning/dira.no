@@ -21,9 +21,7 @@ body {
         font-size: 20px;
     }
 
-    @include media-up(4k) {
-        font-size: 36px;
-    }
+
 }
 
 h1,
@@ -31,92 +29,91 @@ h4,
 h5,
 h6 {
     font-weight: 700;
-    margin: 0;
 }
 
 h1 {
-	font-size: 38px;
-    line-height: 1.175;
+	font-size: 28px;
+    line-height: 2;
     font-weight: 500;
 
-    @include media-up(xl) {
-        font-size: 64px;
+    @include media-up(s) {
+        font-size: 32px;
     }
 
-    @include media-up(4k) {
-        font-size: 80px;
+    @include media-up(m) {
+        font-size: 36px;
     }
+
+
 }
 
 h2 {
 	font-size: 20px;
     font-weight: 800;
-	line-height: normal;
+    line-height: 2;
+
+    @include media-up(s) {
+        font-size: 24px;
+    }
+
+    @include media-up(m) {
+        font-size: 30px;
+    }
+
+
+}
+
+h3 {
+    font-size: 18px;
+    line-height: 2;
+    font-weight: 800;
+
+    @include media-up(s) {
+        font-size: 20px;
+    }
+
+    @include media-up(m) {
+        font-size: 26px;
+    }
+
+
+}
+
+h4 {
+	font-size: 16px;
+    font-weight: 800;
+    line-height: 2;
+
+    @include media-up(s) {
+        font-size: 18px;
+    }
 
     @include media-up(m) {
         font-size: 24px;
     }
 
-    @include media-up(xl) {
-        font-size: 60px;
-    }
 
-    @include media-up(4k) {
-        font-size: 64px;
-    }
 }
 
-h3 {
-    font-size: 20px;
-    line-height: normal;
-    font-weight: 800;
-
-    @include media-up(m) {
-        font-size: 22px;
-    }
-
-    @include media-up(xl) {
-        font-size: 30px;
-    }
-
-    @include media-up(4k) {
-        font-size: 54px;
-    }
-}
-
-h4 {
-	font-size: 18px;
-    font-weight: 800;
-
-    @include media-up(m) {
-        font-size: 20px;
-    }
-
-    @include media-up(xl) {
-        font-size: 26px;
-    }
-
-    @include media-up(4k) {
-        font-size: 48px;
-    }
+h5 {
+    color:#2F53FF
 }
 
 h5,
 h6 {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 800;
+    line-height: 2;
 
-    @include media-up(m) {
-       font-size: 18px;
+    @include media-up(s) {
+       font-size: 16px;
     }
 
-    @include media-up(xl) {
+    @include media-up(m) {
         font-size: 22px;
     }
 
-    @include media-up(4k) {
-        font-size: 42px;
-    }
+
 }
 
 h6 {
@@ -125,7 +122,9 @@ h6 {
 
 p {
     margin: 0;
-    line-height: 1.6;
+    line-height: 1.7;
+
+ 
 }
 
 hr {
@@ -143,7 +142,6 @@ blockquote{
     margin-inline-start: 10px;
     margin-inline-end: 10px;
     margin-top: 30px;
-    margin-bottom: 30px;
   }
   
  
