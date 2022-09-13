@@ -132,6 +132,34 @@ hr {
     border: 1px solid darken($white, 30);
 }
 
+blockquote{
+    font-style:italic;
+    color: #555555;
+    padding:15px 5px 15px 15px;
+    border-left:4px solid #2F53FF ;
+    position: relative;
+    background:#f7f7f7;
+
+    margin-inline-start: 10px;
+    margin-inline-end: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  
+ 
+  blockquote::after{
+    content: '';
+  }
+  
+  blockquote span{
+    display:block;
+    color:#333333;
+    font-style: normal;
+    font-weight: bold;
+    margin-top:1em;
+  }
+
+
 .brand-header {
     font-size: 37px;
     line-height: 1;
