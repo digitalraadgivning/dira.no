@@ -27,6 +27,10 @@
         background: $white;
         padding: 30px;
 
+        a{
+            color: #2F53FF;
+        }
+
         @include media-up(m) {
             margin-top: 50px;
         }
